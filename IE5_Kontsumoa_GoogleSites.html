@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="eu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zenbat kontsumitzen dugu?</title><style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1f2937;--muted:#667085;--accent:#b94f3d;--accent2:#8f392c;--accent-soft:#f4dfda;--line:#e5e7eb;--ok:#e9f6ee;--teacher:#fff7e6}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+.wrap{max-width:1100px;margin:auto;padding:18px}.hero{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,.10)}
+.hero h1{margin:0 0 8px;font-size:clamp(28px,4vw,44px);line-height:1.1}.hero p{margin:0;opacity:.95}
+.switch{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.switch button{border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;background:#fff;color:var(--accent2)}
+.switch button.active{background:#1f2937;color:#fff}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}.mini h3{margin:0 0 6px;font-size:14px;color:var(--accent)}.mini p{margin:0;font-size:14px}
+.section{background:var(--card);border:1px solid var(--line);border-radius:16px;margin:14px 0;padding:18px}.section h2{margin:0 0 12px;font-size:22px}
+details{border:1px solid var(--line);border-radius:14px;margin:10px 0;background:#fff;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:700;display:flex;align-items:center;gap:12px}summary::-webkit-details-marker{display:none}
+.num{display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent);font-weight:800;flex:0 0 auto}
+.content{padding:0 18px 18px}.box{border-left:5px solid var(--accent);background:#faf7f6;border-radius:8px;padding:12px 14px;margin:12px 0}.submit{background:var(--ok);border-left-color:#2f855a}
+.help{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.pill{display:inline-block;padding:7px 11px;border-radius:999px;background:#eef2f7;color:#344054;font-size:13px;text-decoration:none}
+.teacher{display:none}body.teacher-mode .teacher{display:block}body.teacher-mode .student-only{display:none}.teacher-card{background:var(--teacher);border:1px solid #f2d49a}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:#f8fafc}
+.footer{color:var(--muted);font-size:13px;text-align:center;padding:24px 0}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.grid{grid-template-columns:1fr}.wrap{padding:10px}.hero{padding:20px}}
+</style></head><body><div class="wrap">
+<section class="hero"><h1>Zenbat kontsumitzen dugu?</h1><p>Ikaskuntza-egoera · 3. ebaluazioa · 16 saio inguru</p></section>
+<div class="switch"><button id="studentBtn" class="active" onclick="setMode('student')">👨‍🎓 Ikaslea</button><button id="teacherBtn" onclick="setMode('teacher')">👨‍🏫 Irakaslea</button></div>
+<div class="student-only">
+<div class="grid">
+<div class="mini"><h3>ERRONKA</h3><p>Gure eguneroko ohiturek zenbat energia eta baliabide kontsumitzen dituzte, eta zer egin dezakegu gutxiago kontsumitzeko?</p></div>
+<div class="mini"><h3>ZER LANDUKO DUGU?</h3><p>Kontsumo-datuak, estatistika, grafikoak, energia, ingurumen-eragina eta tresna digitalak.</p></div>
+<div class="mini"><h3>AZKEN PRODUKTUA</h3><p>Kontsumoari buruzko azterlan estatistikoa + hobekuntza-proposamenak.</p></div>
+<div class="mini"><h3>DENBORA</h3><p>16 saio inguru.</p></div>
+</div>
+<section class="section"><h2>Jarduerak</h2>
+        <details open>
+          <summary><span class="num">1</span> Zenbat kontsumitzen dugu?</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Egin etxeko edo ikastetxeko ohiko kontsumo-egoeren lehen estimazioa.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">📄 Estimazio-fitxa</a><a class="pill" href="#" onclick="return false;">💡 Adibideak</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>Estimazio-taula.</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="num">2</span> Datuak irakurtzen ikasi</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Interpretatu kontsumoari buruzko taula edo grafiko bat eta atera lehen ondorioak.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">📊 Grafikoak</a><a class="pill" href="#" onclick="return false;">🧠 Galdera gidatuak</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>Grafiko-irakurketa erantzunda.</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="num">3</span> Kontsumo-datuak antolatu</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Bildu edo erabili emandako datuak eta antolatu kalkulu-orri batean.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">🧾 Datu-sorta</a><a class="pill" href="#" onclick="return false;">📊 Kalkulu-orria</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>Datu-taula digitala.</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="num">4</span> Grafikoak eta parametro estatistikoak</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Sortu grafikoak eta kalkulatu oinarrizko parametro estatistikoak; interpretatu emaitzak.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">📈 Grafiko-gida</a><a class="pill" href="#" onclick="return false;">🧮 Estatistika-laguntza</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>Grafikoak + kalkuluak + azalpen laburra.</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="num">5</span> Kontsumotik ingurumen-eraginera</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Lotu kontsumoa ingurumen-ondorioekin eta proposatu hobekuntza-neurriak.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">🌱 Informazioa</a><a class="pill" href="#" onclick="return false;">📝 Proposamen-gida</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>Proposamen arrazoitua.</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="num">6</span> Zenbat kontsumitzen dugu? · Azken erronka</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Aurkeztu azterlan estatistikoa, ondorioak eta kontsumoa murrizteko proposamenak euskarri digitalean.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">✅ Errubrika</a><a class="pill" href="#" onclick="return false;">🖥️ Aurkezpen-txantiloia</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>Azterlan estatistikoa + azken aurkezpena.</div>
+          </div>
+        </details></section>
+<section class="section"><h2>Nola jakingo duzu ondo egin duzula?</h2><ul><li>Datuak taula eta grafikoetan zuzen antolatzen dituzu.</li><li>Oinarrizko parametro estatistikoak interpretatzen dituzu.</li><li>Kontsumoa ingurumen-eraginarekin lotzen duzu.</li><li>Hobekuntza-proposamen arrazoituak egiten dituzu.</li></ul></section>
+</div>
+<div class="teacher">
+<section class="section teacher-card"><h2>Irakaslearentzako ikuspegia</h2><table><tr><td>KE</td><td>KE1, KE3, KE4, KE5, KE6, KE7</td></tr><tr><td>Ebaluazio-irizpideak</td><td>1.1, 1.2, 1.3, 3.4, 4.4, 4.5, 5.1, 5.2, 5.3, 5.4, 6.2, 6.3, 7.1, 7.2</td></tr><tr><td>Oinarrizko jakintzak</td><td>G) Zentzu estokastikoa · I) Interakzioak eta energia · K) Lurra sistema gisa eta garapen jasangarria · F) Digitalizazioa · A) Trebetasun zientifiko-teknologikoak</td></tr><tr><td>Azken ebidentzia</td><td>Azterlan estatistikoa + hobekuntza-proposamenak</td></tr><tr><td>Ebaluazio erreminta</td><td>Errubrika + banakako proba + autoebaluazioa</td></tr></table></section>
+<section class="section teacher-card"><h2>Irakaslearentzako baliabideak</h2>
+<div class="help">
+<a class="pill" href="#" onclick="return false;">📘 Programazio-fitxa</a>
+<a class="pill" href="#" onclick="return false;">📄 Ikaslearen materiala</a>
+<a class="pill" href="#" onclick="return false;">✅ Soluzioak</a>
+<a class="pill" href="#" onclick="return false;">📊 Errubrika</a>
+<a class="pill" href="#" onclick="return false;">🎥 Bideoak</a>
+<a class="pill" href="#" onclick="return false;">🧪 Jarduera osagarriak</a>
+</div>
+<p style="font-size:13px;color:#667085">Esteka hauek leku-markak dira. Soluzioak eta material konfidentzialak Drive-ko irakasleentzako baimendutako karpetan gordetzea gomendatzen da.</p>
+</section></div>
+<div class="footer">Zientzia eta Teknologia Eremua · Curriculum Aniztasuna</div></div><script>function setMode(mode){document.body.classList.toggle('teacher-mode',mode==='teacher');document.getElementById('studentBtn').classList.toggle('active',mode==='student');document.getElementById('teacherBtn').classList.toggle('active',mode==='teacher');}</script></body></html>

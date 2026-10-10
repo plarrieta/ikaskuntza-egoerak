@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="eu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lurra aldatzen ari da</title><style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1f2937;--muted:#667085;--accent:#b94f3d;--accent2:#8f392c;--accent-soft:#f4dfda;--line:#e5e7eb;--ok:#e9f6ee;--teacher:#fff7e6}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+.wrap{max-width:1100px;margin:auto;padding:18px}.hero{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-radius:18px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,.10)}
+.hero h1{margin:0 0 8px;font-size:clamp(28px,4vw,44px);line-height:1.1}.hero p{margin:0;opacity:.95}
+.switch{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.switch button{border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;background:#fff;color:var(--accent2)}
+.switch button.active{background:#1f2937;color:#fff}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+.mini{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}.mini h3{margin:0 0 6px;font-size:14px;color:var(--accent)}.mini p{margin:0;font-size:14px}
+.section{background:var(--card);border:1px solid var(--line);border-radius:16px;margin:14px 0;padding:18px}.section h2{margin:0 0 12px;font-size:22px}
+details{border:1px solid var(--line);border-radius:14px;margin:10px 0;background:#fff;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:700;display:flex;align-items:center;gap:12px}summary::-webkit-details-marker{display:none}
+.num{display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent);font-weight:800;flex:0 0 auto}
+.content{padding:0 18px 18px}.box{border-left:5px solid var(--accent);background:#faf7f6;border-radius:8px;padding:12px 14px;margin:12px 0}.submit{background:var(--ok);border-left-color:#2f855a}
+.help{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.pill{display:inline-block;padding:7px 11px;border-radius:999px;background:#eef2f7;color:#344054;font-size:13px;text-decoration:none}
+.teacher{display:none}body.teacher-mode .teacher{display:block}body.teacher-mode .student-only{display:none}.teacher-card{background:var(--teacher);border:1px solid #f2d49a}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:#f8fafc}
+.footer{color:var(--muted);font-size:13px;text-align:center;padding:24px 0}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.grid{grid-template-columns:1fr}.wrap{padding:10px}.hero{padding:20px}}
+</style></head><body><div class="wrap">
+<section class="hero"><h1>Lurra aldatzen ari da</h1><p>Ikaskuntza-egoera · 2. ebaluazioa · 16 saio inguru</p></section>
+<div class="switch"><button id="studentBtn" class="active" onclick="setMode('student')">👨‍🎓 Ikaslea</button><button id="teacherBtn" onclick="setMode('teacher')">👨‍🏫 Irakaslea</button></div>
+<div class="student-only">
+<div class="grid">
+<div class="mini"><h3>ERRONKA</h3><p>Zergatik ez da Lurraren paisaia beti berdina?</p></div>
+<div class="mini"><h3>ZER LANDUKO DUGU?</h3><p>Kanpo- eta barne-geologia, Lurraren egitura eta dinamika, erliebea, eskala eta 3D modelaketa.</p></div>
+<div class="mini"><h3>AZKEN PRODUKTUA</h3><p>Paisaia edo egitura geologiko baten 3D eredua + azalpen geologikoa.</p></div>
+<div class="mini"><h3>DENBORA</h3><p>16 saio inguru.</p></div>
+</div>
+<section class="section"><h2>Jarduerak</h2>
+        <details open>
+          <summary><span class="num">1</span> Paisaia bera beti?</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Alderatu paisaia-irudiak eta proposatu zer prozesuk eragin duten haien aldaketan.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">🖼️ Irudiak</a><a class="pill" href="#" onclick="return false;">📄 Hipotesi-fitxa</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>Hipotesi laburra.</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="num">2</span> Zer dago gure oinen azpian?</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Irudikatu Lurraren egitura eta plaken mugimendua hasierako eskema batean.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">🌍 Eskema</a><a class="pill" href="#" onclick="return false;">🎥 Bideoa</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>Kontzeptu-mapa.</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="num">3</span> Barneko eta kanpoko geologia</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Sailkatu prozesu geologikoak eta erlazionatu haiek erliebe-formekin.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">📘 Apunteak</a><a class="pill" href="#" onclick="return false;">🖼️ Erliebe-formak</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>Sailkapen-taula.</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="num">4</span> Erliebe baten historia irakurtzea</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Aztertu profil edo irudi geologiko bat eta arrazoitu haren bilakaera.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">🧠 Laguntza</a><a class="pill" href="#" onclick="return false;">📄 Profilak</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>Azalpen arrazoitua.</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="num">5</span> 3D modelaketa</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Sortu paisaia edo egitura geologiko baten eredu digital sinplea, eskala eta forma espazialak erabiliz.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">🧱 SketchUp</a><a class="pill" href="#" onclick="return false;">📏 Eskala-laguntza</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>3D eredua + diseinu-fitxa.</div>
+          </div>
+        </details>
+        <details>
+          <summary><span class="num">6</span> Lurra aldatzen ari da · Azken erronka</summary>
+          <div class="content">
+            <div class="box"><b>Zer egin behar duzu?</b><br>Aurkeztu zure 3D eredua eta azaldu zer prozesu geologikok sortu duten.</div>
+            <div class="help"><a class="pill" href="#" onclick="return false;">✅ Errubrika</a><a class="pill" href="#" onclick="return false;">📝 Aurkezpen-gida</a></div>
+            <div class="box submit"><b>Entregatu behar duzuna:</b><br>3D eredua + azalpen geologikoa.</div>
+          </div>
+        </details></section>
+<section class="section"><h2>Nola jakingo duzu ondo egin duzula?</h2><ul><li>Barneko eta kanpoko prozesuak bereizten dituzu.</li><li>Erliebea prozesu geologikoekin lotzen duzu.</li><li>Eskala eta irudikapen espaziala egoki erabiltzen dituzu.</li><li>3D eredua azalpen zientifikoarekin justifikatzen duzu.</li></ul></section>
+</div>
+<div class="teacher">
+<section class="section teacher-card"><h2>Irakaslearentzako ikuspegia</h2><table><tr><td>KE</td><td>KE1, KE3, KE4, KE5, KE6, KE7</td></tr><tr><td>Ebaluazio-irizpideak</td><td>1.1, 1.2, 1.3, 3.3, 4.4, 5.1, 5.2, 5.3, 5.4, 6.2, 6.3, 7.1, 7.2</td></tr><tr><td>Oinarrizko jakintzak</td><td>K) Lurra sistema gisa eta garapen jasangarria · D) Zentzu espaziala · E) Zentzu aljebraikoa · A) Trebetasun zientifiko-teknologikoak</td></tr><tr><td>Azken ebidentzia</td><td>3D eredua + azalpen geologikoa</td></tr><tr><td>Ebaluazio erreminta</td><td>Errubrika + banakako proba + autoebaluazioa</td></tr></table></section>
+<section class="section teacher-card"><h2>Irakaslearentzako baliabideak</h2>
+<div class="help">
+<a class="pill" href="#" onclick="return false;">📘 Programazio-fitxa</a>
+<a class="pill" href="#" onclick="return false;">📄 Ikaslearen materiala</a>
+<a class="pill" href="#" onclick="return false;">✅ Soluzioak</a>
+<a class="pill" href="#" onclick="return false;">📊 Errubrika</a>
+<a class="pill" href="#" onclick="return false;">🎥 Bideoak</a>
+<a class="pill" href="#" onclick="return false;">🧪 Jarduera osagarriak</a>
+</div>
+<p style="font-size:13px;color:#667085">Esteka hauek leku-markak dira. Soluzioak eta material konfidentzialak Drive-ko irakasleentzako baimendutako karpetan gordetzea gomendatzen da.</p>
+</section></div>
+<div class="footer">Zientzia eta Teknologia Eremua · Curriculum Aniztasuna</div></div><script>function setMode(mode){document.body.classList.toggle('teacher-mode',mode==='teacher');document.getElementById('studentBtn').classList.toggle('active',mode==='student');document.getElementById('teacherBtn').classList.toggle('active',mode==='teacher');}</script></body></html>
