@@ -1,30 +1,262 @@
-<!DOCTYPE html><html lang="eu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IE6 · Mugimendua funtzioen bidez</title>
-<style>:root{--bg:#f6f7f9;--card:#fff;--text:#1f2937;--accent:#4f6fae;--line:#e5e7eb;--ok:#e9f6ee}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:980px;margin:auto;padding:16px}.hero{background:linear-gradient(135deg,#4f6fae,#334a7a);color:#fff;border-radius:18px;padding:24px}.hero h1{margin:0 0 8px}.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}.m,.card{background:#fff;border:1px solid var(--line);border-radius:14px}.m{padding:12px}.m b{font-size:12px;color:var(--accent)}.card{padding:14px;margin:10px 0}.row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.phase{font-size:11px;font-weight:800;color:var(--accent)}.btn{display:inline-block;background:#2b6f5e;color:#fff;text-decoration:none;padding:8px 12px;border-radius:7px;font-weight:700;font-size:13px;margin:7px 6px 0 0}.submit{background:var(--ok);border-left:4px solid #2f855a;padding:10px;margin-top:9px}.muted{color:#667085;font-size:13px}@media(max-width:700px){.meta{grid-template-columns:1fr 1fr}}@media(max-width:450px){.meta{grid-template-columns:1fr}}</style></head>
-<body><div class="wrap">
-<section class="hero"><h1>IE6 · Mugimendua funtzioen bidez</h1><p><b>Galdera gidaria:</b> Nola berreraiki dezakegu mugimendu bat datuak, kalkuluak eta grafikoak erabiliz?</p></section>
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IE6 · Mugimendua funtzioen bidez</title>
+<style>
+:root{
+  --bg:#f6f7f9;
+  --card:#fff;
+  --text:#1f2937;
+  --accent:#4f6fae;
+  --accent-dark:#334a7a;
+  --line:#e5e7eb;
+  --ok:#e9f6ee;
+  --final:#c97816;
+  --final-dark:#9d5c0f;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text)}
+.wrap{max-width:980px;margin:auto;padding:16px}
+.hero{
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  color:#fff;border-radius:18px;padding:24px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08)
+}
+.hero h1{margin:0 0 8px}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.m{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
+.m b{font-size:12px;color:var(--accent)}
+h2{margin:20px 0 10px}
+
+details.activity{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  margin:10px 0;
+  overflow:hidden
+}
+details.activity summary{
+  cursor:pointer;
+  list-style:none;
+  padding:15px 16px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800
+}
+details.activity summary::-webkit-details-marker{display:none}
+details.activity summary::before{
+  content:"›";
+  color:var(--accent);
+  font-size:24px;
+  line-height:1;
+  transition:transform .18s ease
+}
+details.activity[open] summary::before{transform:rotate(90deg)}
+.title{flex:1}
+.phase{
+  margin-left:auto;
+  font-size:11px;
+  font-weight:800;
+  color:var(--accent)
+}
+.content{
+  border-top:1px solid var(--line);
+  padding:14px 16px 16px
+}
+.content p{margin-top:0}
+.btn{
+  display:inline-block;
+  background:#2b6f5e;
+  color:#fff;
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:7px;
+  font-weight:700;
+  font-size:13px;
+  margin:7px 6px 0 0
+}
+.btn:hover{background:#245548}
+.btn.secondary{
+  background:#fff;
+  color:#2b6f5e;
+  border:1px solid #2b6f5e
+}
+.submit{
+  background:var(--ok);
+  border-left:4px solid #2f855a;
+  padding:10px;
+  margin-top:9px;
+  border-radius:7px
+}
+.final-product{
+  border:2px solid var(--final)!important;
+  background:#fffaf3!important;
+  box-shadow:0 7px 18px rgba(201,120,22,.12)
+}
+.final-product summary{
+  background:linear-gradient(90deg,#fffaf2,#fff1db)
+}
+.final-product summary::before{color:var(--final)!important}
+.final-product .phase{
+  background:var(--final);
+  color:#fff;
+  border-radius:999px;
+  padding:5px 9px
+}
+.final-product .content{border-top:1px solid #efd1a6}
+.final-intro{
+  background:#fff3df;
+  border-left:5px solid var(--final);
+  border-radius:8px;
+  padding:12px 14px;
+  margin:0 0 12px
+}
+.final-badge{
+  display:inline-block;
+  background:var(--final);
+  color:#fff;
+  border-radius:999px;
+  padding:5px 9px;
+  margin:0 0 8px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.04em
+}
+.final-product .btn{background:var(--final)}
+.final-product .btn:hover{background:var(--final-dark)}
+.final-product .btn.secondary{
+  background:#fff;
+  color:var(--final-dark);
+  border:1px solid var(--final)
+}
+.final-product .submit{
+  background:#fff0d8;
+  border-left-color:var(--final)
+}
+.success{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px;
+  margin-top:12px
+}
+.muted{color:#667085;font-size:13px}
+@media(max-width:700px){
+  .meta{grid-template-columns:1fr 1fr}
+  .phase{font-size:10px}
+}
+@media(max-width:450px){
+  .meta{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+  <h1>IE6 · Mugimendua funtzioen bidez</h1>
+  <p><b>Galdera gidaria:</b> Nola berreraiki dezakegu mugimendu bat datuak, kalkuluak eta grafikoak erabiliz?</p>
+</section>
+
 <div class="meta">
-<div class="m"><b>ERRONKA</b><p>Mugimendu baten arrasto matematiko eta fisikoa interpretatzea.</p></div>
-<div class="m"><b>ZER LANDUKO DUGU?</b><p>Posizioa, abiadura, azelerazioa, taulak, grafikoak, MRU eta MRUA.</p></div>
-<div class="m"><b>AZKEN PRODUKTUA</b><p>Mugimendu baten txosten forentsea.</p></div>
-<div class="m"><b>DENBORA</b><p>15-16 saio inguru.</p></div>
+  <div class="m"><b>ERRONKA</b><p>Mugimendu baten arrasto matematiko eta fisikoa interpretatzea.</p></div>
+  <div class="m"><b>ZER LANDUKO DUGU?</b><p>Posizioa, abiadura, azelerazioa, taulak, grafikoak, MRU eta MRUA.</p></div>
+  <div class="m"><b>AZKEN PRODUKTUA</b><p>Mugimendu baten txosten forentsea.</p></div>
+  <div class="m"><b>DENBORA</b><p>15-16 saio inguru.</p></div>
 </div>
+
 <h2>Jarduerak</h2>
 
-<section class="card"><div class="row"><h3>J1 · Zer gertatu da mugimendu honetan?</h3><span class="phase">HASIERA</span></div><p>Zure hasierako azalpena eta grafiko intuitiboa egin.</p><a class="btn" href="https://docs.google.com/document/d/1hXQi4zRrpr1pGvKCS8oZTAjiHMoiyU822YYJ8GJXzQo/edit?usp=drive_link" target="_blank">IREKI FITXA</a><div class="submit"><b>Entregatu behar duzuna:</b> Hasierako erantzunak + grafikoa.</div></section>
+<details class="activity">
+  <summary><span class="title">J1 · Zer gertatu da mugimendu honetan?</span><span class="phase">HASIERA</span></summary>
+  <div class="content">
+    <p>Zure hasierako azalpena eta grafiko intuitiboa egin.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1hXQi4zRrpr1pGvKCS8oZTAjiHMoiyU822YYJ8GJXzQo/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Hasierako erantzunak + grafikoa.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J2 · Mugimenduaren lehen hiztegia</h3><span class="phase">HASIERA</span></div><p>Magnitude nagusiak eta unitateak antolatu.</p><a class="btn" href="https://docs.google.com/document/d/1MMurqyGUwv7XhvM6rh-0FY49wPWu0JJStxAq8vPgEcc/edit?usp=drive_link" target="_blank">IREKI FITXA</a><div class="submit"><b>Entregatu behar duzuna:</b> Taula + kontzeptu-mapa.</div></section>
+<details class="activity">
+  <summary><span class="title">J2 · Mugimenduaren lehen hiztegia</span><span class="phase">HASIERA</span></summary>
+  <div class="content">
+    <p>Magnitude nagusiak eta unitateak antolatu.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1MMurqyGUwv7XhvM6rh-0FY49wPWu0JJStxAq8vPgEcc/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Taula + kontzeptu-mapa.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J3 · Datuetatik grafikoetara</h3><span class="phase">GARAPENA</span></div><p>Taula batetik x-t grafikoa eta abiadura interpretatu.</p><a class="btn" href="https://docs.google.com/document/d/1E-til6YSmhUm9VnzveRouDkSEkpyP4n1g3ueIWVLxIs/edit?usp=drive_link" target="_blank">IREKI FITXA</a><div class="submit"><b>Entregatu behar duzuna:</b> Kalkulua + grafikoa + interpretazioa.</div></section>
+<details class="activity">
+  <summary><span class="title">J3 · Datuetatik grafikoetara</span><span class="phase">GARAPENA</span></summary>
+  <div class="content">
+    <p>Taula batetik x-t grafikoa eta abiadura interpretatu.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1E-til6YSmhUm9VnzveRouDkSEkpyP4n1g3ueIWVLxIs/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Kalkulua + grafikoa + interpretazioa.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J4 · MRU ala MRUA?</h3><span class="phase">GARAPENA</span></div><p>Bi mugimendu-eredu alderatu.</p><a class="btn" href="https://docs.google.com/document/d/1j70ZyhxAg-u17q6yXiAGovsB8IKQ_5kaQfamDs9towk/edit?usp=drive_link" target="_blank">IREKI FITXA</a><div class="submit"><b>Entregatu behar duzuna:</b> 4 erantzun arrazoitu.</div></section>
+<details class="activity">
+  <summary><span class="title">J4 · MRU ala MRUA?</span><span class="phase">GARAPENA</span></summary>
+  <div class="content">
+    <p>Bi mugimendu-eredu alderatu.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1j70ZyhxAg-u17q6yXiAGovsB8IKQ_5kaQfamDs9towk/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> 4 erantzun arrazoitu.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J5 · Mugimendu-forentsea: zer gertatu zen?</h3><span class="phase">GARAPENA</span></div><p>Korrikalariaren datuak aztertu eta ondorioa atera.</p><a class="btn" href="https://docs.google.com/document/d/1-b7362KCaKhGzsW1h2uy9gRfYwbNpbKYbqfNOeNjHrA/edit?usp=drive_link" target="_blank">IREKI FITXA</a><div class="submit"><b>Entregatu behar duzuna:</b> Kalkuluak + ondorio forentsea.</div></section>
+<details class="activity">
+  <summary><span class="title">J5 · Mugimendu-forentsea: zer gertatu zen?</span><span class="phase">GARAPENA</span></summary>
+  <div class="content">
+    <p>Korrikalariaren datuak aztertu eta ondorioa atera.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1-b7362KCaKhGzsW1h2uy9gRfYwbNpbKYbqfNOeNjHrA/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Kalkuluak + ondorio forentsea.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J6 · Mugimendu baten txosten forentsea</h3><span class="phase">APLIKAZIOA</span></div><p>Datuak, kalkuluak eta grafikoak erabiliz mugimendua berreraiki.</p><a class="btn" href="https://docs.google.com/document/d/1NkBXLOYOS7qgudPXb9TIxfgVu9HqPKPw0xW0DEG7W40/edit?usp=drive_link" target="_blank">IREKI FITXA</a><a class="btn" href="https://docs.google.com/document/d/1SOeOH_-sd9lAqqHRlamm7inHDD7N2RlAEp6QPW6gPZc/edit?usp=drive_link" target="_blank">IREKI ERRUBRIKA</a><div class="submit"><b>Entregatu behar duzuna:</b> Txosten laburra edo 4 diapositibako aurkezpena.</div></section>
+<details class="activity final-product">
+  <summary><span class="title">J6 · Mugimendu baten txosten forentsea</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
+  <div class="content">
+    <div class="final-intro">
+      <span class="final-badge">AZKEN PRODUKTUA</span><br>
+      <b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br>
+      Datuak, kalkuluak eta grafikoak erabiliz mugimendua berreraiki eta ondorio forentse arrazoitua aurkeztu.
+    </div>
+    <a class="btn" href="https://docs.google.com/document/d/1NkBXLOYOS7qgudPXb9TIxfgVu9HqPKPw0xW0DEG7W40/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <a class="btn secondary" href="https://docs.google.com/document/d/1SOeOH_-sd9lAqqHRlamm7inHDD7N2RlAEp6QPW6gPZc/edit?usp=drive_link" target="_blank" rel="noopener">IREKI ERRUBRIKA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Txosten laburra edo 4 diapositibako aurkezpena.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J7 · Banakako egiaztapen-proba</h3><span class="phase">AMAIERA</span></div><p>Irakasleak emango du gelan.</p><div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div></section>
+<details class="activity">
+  <summary><span class="title">J7 · Banakako egiaztapen-proba</span><span class="phase">AMAIERA</span></summary>
+  <div class="content">
+    <p>Irakasleak emango du gelan.</p>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J8 · Hasieran zer pentsatzen nuen eta orain zer dakit?</h3><span class="phase">AMAIERA</span></div><p>Hasierako ideiak eta grafikoen interpretazioa berrikusi.</p><a class="btn" href="https://docs.google.com/document/d/1P3tphmhmWXghKS98ixWrysu-nFJEh3_5c183edGZNZo/edit?usp=drive_link" target="_blank">IREKI FITXA</a><div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div></section>
+<details class="activity">
+  <summary><span class="title">J8 · Hasieran zer pentsatzen nuen eta orain zer dakit?</span><span class="phase">AMAIERA</span></summary>
+  <div class="content">
+    <p>Hasierako ideiak eta grafikoen interpretazioa berrikusi.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1P3tphmhmWXghKS98ixWrysu-nFJEh3_5c183edGZNZo/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div>
+  </div>
+</details>
+
+<section class="success">
+  <h3>Nola jakingo duzu ondo egin duzula?</h3>
+  <ul>
+    <li>Posizioa, abiadura eta azelerazioa egoera egokietan bereizten badituzu.</li>
+    <li>Datu-taulak grafiko bihurtu eta grafikoetatik informazioa ateratzen baduzu.</li>
+    <li>MRU eta MRUA bereizteko gai bazara eta arrazoitzen baduzu zergatik.</li>
+    <li>Kalkuluak, grafikoak eta ondorioak elkarrekin koherenteak badira.</li>
+  </ul>
+</section>
 
 <p class="muted">Zientzia eta Teknologia Eremua · Curriculum Aniztasuna</p>
-</div></body></html>
+</div>
+</body>
+</html>
