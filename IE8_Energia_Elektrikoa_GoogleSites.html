@@ -1,30 +1,268 @@
-<!DOCTYPE html><html lang="eu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IE8 · Energia elektrikoa</title>
-<style>:root{--bg:#f6f7f9;--card:#fff;--text:#1f2937;--accent:#2d7f8c;--line:#e5e7eb;--ok:#e9f6ee}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text)}.wrap{max-width:980px;margin:auto;padding:16px}.hero{background:linear-gradient(135deg,#2f8f9d,#225b6a);color:#fff;border-radius:18px;padding:24px}.hero h1{margin:0 0 8px}.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}.m,.card{background:#fff;border:1px solid var(--line);border-radius:14px}.m{padding:12px}.m b{font-size:12px;color:var(--accent)}.card{padding:14px;margin:10px 0}.row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.phase{font-size:11px;font-weight:800;color:var(--accent)}.btn{display:inline-block;background:#2b6f5e;color:#fff;text-decoration:none;padding:8px 12px;border-radius:7px;font-weight:700;font-size:13px;margin:7px 6px 0 0}.btn.alt{background:#4c6fa8}.submit{background:var(--ok);border-left:4px solid #2f855a;padding:10px;margin-top:9px}.muted{color:#667085;font-size:13px}@media(max-width:700px){.meta{grid-template-columns:1fr 1fr}}@media(max-width:450px){.meta{grid-template-columns:1fr}}</style></head>
-<body><div class="wrap">
-<section class="hero"><h1>IE8 · Energia elektrikoa: diseinatu eta ulertu</h1><p><b>Galdera gidaria:</b> Nola diseinatu dezakegu zirkuitu elektriko bat eta nola azaldu bere funtzionamendua neurketen bidez?</p></section>
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IE8 · Energia elektrikoa: diseinatu eta ulertu</title>
+<style>
+:root{
+  --bg:#f6f7f9;
+  --card:#fff;
+  --text:#1f2937;
+  --accent:#2d7f8c;
+  --accent-dark:#225b6a;
+  --line:#e5e7eb;
+  --ok:#e9f6ee;
+  --final:#c97816;
+  --final-dark:#9d5c0f;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text)}
+.wrap{max-width:980px;margin:auto;padding:16px}
+.hero{
+  background:linear-gradient(135deg,#2f8f9d,var(--accent-dark));
+  color:#fff;border-radius:18px;padding:24px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08)
+}
+.hero h1{margin:0 0 8px}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.m{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}
+.m b{font-size:12px;color:var(--accent)}
+h2{margin:20px 0 10px}
+
+details.activity{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  margin:10px 0;
+  overflow:hidden
+}
+details.activity summary{
+  cursor:pointer;
+  list-style:none;
+  padding:15px 16px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800
+}
+details.activity summary::-webkit-details-marker{display:none}
+details.activity summary::before{
+  content:"›";
+  color:var(--accent);
+  font-size:24px;
+  line-height:1;
+  transition:transform .18s ease
+}
+details.activity[open] summary::before{transform:rotate(90deg)}
+.title{flex:1}
+.phase{
+  margin-left:auto;
+  font-size:11px;
+  font-weight:800;
+  color:var(--accent)
+}
+.content{
+  border-top:1px solid var(--line);
+  padding:14px 16px 16px
+}
+.content p{margin-top:0}
+.btn{
+  display:inline-block;
+  background:#2b6f5e;
+  color:#fff;
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:7px;
+  font-weight:700;
+  font-size:13px;
+  margin:7px 6px 0 0
+}
+.btn:hover{background:#245548}
+.btn.alt{
+  background:#4c6fa8;
+}
+.btn.alt:hover{background:#3b5682}
+.btn.secondary{
+  background:#fff;
+  color:#2b6f5e;
+  border:1px solid #2b6f5e
+}
+.submit{
+  background:var(--ok);
+  border-left:4px solid #2f855a;
+  padding:10px;
+  margin-top:9px;
+  border-radius:7px
+}
+.final-product{
+  border:2px solid var(--final)!important;
+  background:#fffaf3!important;
+  box-shadow:0 7px 18px rgba(201,120,22,.12)
+}
+.final-product summary{
+  background:linear-gradient(90deg,#fffaf2,#fff1db)
+}
+.final-product summary::before{color:var(--final)!important}
+.final-product .phase{
+  background:var(--final);
+  color:#fff;
+  border-radius:999px;
+  padding:5px 9px
+}
+.final-product .content{border-top:1px solid #efd1a6}
+.final-intro{
+  background:#fff3df;
+  border-left:5px solid var(--final);
+  border-radius:8px;
+  padding:12px 14px;
+  margin:0 0 12px
+}
+.final-badge{
+  display:inline-block;
+  background:var(--final);
+  color:#fff;
+  border-radius:999px;
+  padding:5px 9px;
+  margin:0 0 8px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.04em
+}
+.final-product .btn{background:var(--final)}
+.final-product .btn:hover{background:var(--final-dark)}
+.final-product .btn.secondary{
+  background:#fff;
+  color:var(--final-dark);
+  border:1px solid var(--final)
+}
+.final-product .submit{
+  background:#fff0d8;
+  border-left-color:var(--final)
+}
+.success{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px;
+  margin-top:12px
+}
+.muted{color:#667085;font-size:13px}
+@media(max-width:700px){
+  .meta{grid-template-columns:1fr 1fr}
+  .phase{font-size:10px}
+}
+@media(max-width:450px){
+  .meta{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+  <h1>IE8 · Energia elektrikoa: diseinatu eta ulertu</h1>
+  <p><b>Galdera gidaria:</b> Nola diseinatu dezakegu zirkuitu elektriko bat eta nola azaldu bere funtzionamendua neurketen bidez?</p>
+</section>
+
 <div class="meta">
-<div class="m"><b>ERRONKA</b><p>Zirkuitu funtzional bat diseinatu eta azaltzea.</p></div>
-<div class="m"><b>ZER LANDUKO DUGU?</b><p>Zirkuituak, tentsioa, korrontea, datuak, grafikoak eta CAD/planoa.</p></div>
-<div class="m"><b>AZKEN PRODUKTUA</b><p>Zirkuitua/simulazioa + grafikoa + diseinu teknikoa.</p></div>
-<div class="m"><b>DENBORA</b><p>16 saio inguru.</p></div>
+  <div class="m"><b>ERRONKA</b><p>Zirkuitu funtzional bat diseinatu eta azaltzea.</p></div>
+  <div class="m"><b>ZER LANDUKO DUGU?</b><p>Zirkuituak, tentsioa, korrontea, datuak, grafikoak eta CAD/planoa.</p></div>
+  <div class="m"><b>AZKEN PRODUKTUA</b><p>Zirkuitua/simulazioa + grafikoa + diseinu teknikoa.</p></div>
+  <div class="m"><b>DENBORA</b><p>16 saio inguru.</p></div>
 </div>
+
 <h2>Jarduerak</h2>
 
-<section class="card"><div class="row"><h3>J1 · Zergatik pizten da bonbilla?</h3><span class="phase">HASIERA</span></div><p>Zirkuituari buruzko lehen hipotesiak egin.</p><a class="btn" href="https://docs.google.com/document/d/1mASLMI9hBZqCe47fLNam8o8s1O4iKbjcCXYvpxm1X7c/edit?usp=drive_link" target="_blank">IREKI FITXA</a><div class="submit"><b>Entregatu behar duzuna:</b> Aurretiko ideien fitxa.</div></section>
+<details class="activity">
+  <summary><span class="title">J1 · Zergatik pizten da bonbilla?</span><span class="phase">HASIERA</span></summary>
+  <div class="content">
+    <p>Zirkuituari buruzko lehen hipotesiak egin.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1mASLMI9hBZqCe47fLNam8o8s1O4iKbjcCXYvpxm1X7c/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Aurretiko ideien fitxa.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J2 · Zer neurtzen dugu zirkuitu batean?</h3><span class="phase">HASIERA</span></div><p>Magnitude eta osagaien lehen mapa egin.</p><a class="btn" href="https://docs.google.com/document/d/1yWL6ghu0aeQfHq4bur25x9qzz8ZugUGSIONMoFah5yQ/edit?usp=drive_link" target="_blank">IREKI FITXA</a><div class="submit"><b>Entregatu behar duzuna:</b> Taula + kontzeptu-mapa.</div></section>
+<details class="activity">
+  <summary><span class="title">J2 · Zer neurtzen dugu zirkuitu batean?</span><span class="phase">HASIERA</span></summary>
+  <div class="content">
+    <p>Magnitude eta osagaien lehen mapa egin.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1yWL6ghu0aeQfHq4bur25x9qzz8ZugUGSIONMoFah5yQ/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Taula + kontzeptu-mapa.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J3 · Eraiki eta probatu zirkuituak</h3><span class="phase">GARAPENA</span></div><p>Serieko eta paraleloko zirkuituak eraiki edo simulatu.</p><a class="btn" href="https://docs.google.com/document/d/1BHmGhbEodnjt8CZPq5GhANoFdIj4GDAzcMVT4dJATTI/edit?usp=drive_link" target="_blank">IREKI FITXA</a><a class="btn alt" href="https://phet.colorado.edu/es/simulations/circuit-construction-kit-dc-virtual-lab" target="_blank">IREKI PhET</a><div class="submit"><b>Entregatu behar duzuna:</b> Bi eskema + behaketak + segurtasun-arauak.</div></section>
+<details class="activity">
+  <summary><span class="title">J3 · Eraiki eta probatu zirkuituak</span><span class="phase">GARAPENA</span></summary>
+  <div class="content">
+    <p>Serieko eta paraleloko zirkuituak eraiki edo simulatu.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1BHmGhbEodnjt8CZPq5GhANoFdIj4GDAzcMVT4dJATTI/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <a class="btn alt" href="https://phet.colorado.edu/es/simulations/circuit-construction-kit-dc-virtual-lab" target="_blank" rel="noopener">IREKI PhET</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Bi eskema + behaketak + segurtasun-arauak.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J4 · Neurtu, antolatu eta interpretatu</h3><span class="phase">GARAPENA</span></div><p>Tentsioa eta korrontea neurtu/simulatu eta grafikoa egin.</p><a class="btn" href="https://docs.google.com/document/d/1qWOLDCtTWqGbXfoFi7Onjvx7fx6XGhcgGFoLyE2Akv8/edit?usp=drive_link" target="_blank">IREKI FITXA</a><a class="btn alt" href="https://phet.colorado.edu/es/simulations/circuit-construction-kit-dc-virtual-lab" target="_blank">IREKI PhET</a><div class="submit"><b>Entregatu behar duzuna:</b> Datu-taula + grafikoa + ondorioa.</div></section>
+<details class="activity">
+  <summary><span class="title">J4 · Neurtu, antolatu eta interpretatu</span><span class="phase">GARAPENA</span></summary>
+  <div class="content">
+    <p>Tentsioa eta korrontea neurtu/simulatu eta grafikoa egin.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1qWOLDCtTWqGbXfoFi7Onjvx7fx6XGhcgGFoLyE2Akv8/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <a class="btn alt" href="https://phet.colorado.edu/es/simulations/circuit-construction-kit-dc-virtual-lab" target="_blank" rel="noopener">IREKI PhET</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Datu-taula + grafikoa + ondorioa.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J5 · Zirkuituarentzako kutxa edo euskarria</h3><span class="phase">GARAPENA</span></div><p>Neurriak eta geometria erabiliz diseinu teknikoa egin.</p><a class="btn" href="https://docs.google.com/document/d/1OC2P8ZIArssntRPtsaZtd2XCnr-8OOi8bIbgOG0V0Yg/edit?usp=drive_link" target="_blank">IREKI FITXA</a><div class="submit"><b>Entregatu behar duzuna:</b> Krokisa/planoa + kalkulua.</div></section>
+<details class="activity">
+  <summary><span class="title">J5 · Zirkuituarentzako kutxa edo euskarria</span><span class="phase">GARAPENA</span></summary>
+  <div class="content">
+    <p>Neurriak eta geometria erabiliz diseinu teknikoa egin.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1OC2P8ZIArssntRPtsaZtd2XCnr-8OOi8bIbgOG0V0Yg/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Krokisa/planoa + kalkulua.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J6 · Energia elektrikoa: diseinatu eta ulertu</h3><span class="phase">APLIKAZIOA</span></div><p>Zirkuitua, datuak, grafikoa eta diseinu teknikoa azalpen bateratuan aurkeztu.</p><a class="btn" href="https://docs.google.com/document/d/1N0yWyH7H0_1rBCnAjKyqdCo7jery2QGpLFjvbLM9crk/edit?usp=drive_link" target="_blank">IREKI FITXA</a><a class="btn" href="https://docs.google.com/document/d/1_H4LbBW6I6gfwMa4V37gbG7li9Qc1gQUYoEuOk482WA/edit?usp=drive_link" target="_blank">IREKI ERRUBRIKA</a><div class="submit"><b>Entregatu behar duzuna:</b> Zirkuitua/simulazioa + grafikoa + CAD/planoa + azalpena.</div></section>
+<details class="activity final-product">
+  <summary><span class="title">J6 · Energia elektrikoa: diseinatu eta ulertu</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
+  <div class="content">
+    <div class="final-intro">
+      <span class="final-badge">AZKEN PRODUKTUA</span><br>
+      <b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br>
+      Zirkuitua, datuak, grafikoa eta diseinu teknikoa azalpen bateratu eta koherente batean aurkeztu.
+    </div>
+    <a class="btn" href="https://docs.google.com/document/d/1N0yWyH7H0_1rBCnAjKyqdCo7jery2QGpLFjvbLM9crk/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <a class="btn secondary" href="https://docs.google.com/document/d/1_H4LbBW6I6gfwMa4V37gbG7li9Qc1gQUYoEuOk482WA/edit?usp=drive_link" target="_blank" rel="noopener">IREKI ERRUBRIKA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Zirkuitua/simulazioa + grafikoa + CAD/planoa + azalpena.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J7 · Banakako egiaztapen-proba</h3><span class="phase">AMAIERA</span></div><p>Irakasleak emango du gelan.</p><div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div></section>
+<details class="activity">
+  <summary><span class="title">J7 · Banakako egiaztapen-proba</span><span class="phase">AMAIERA</span></summary>
+  <div class="content">
+    <p>Irakasleak emango du gelan.</p>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
+  </div>
+</details>
 
-<section class="card"><div class="row"><h3>J8 · Non egin dut hobekuntza handiena?</h3><span class="phase">AMAIERA</span></div><p>Hasierako ideiak eta azken diseinua alderatu.</p><a class="btn" href="https://docs.google.com/document/d/1w8g-5Z3G24yeT_NSvKonGUMPp3Gmgptzfd16qqRHbww/edit?usp=drive_link" target="_blank">IREKI FITXA</a><div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div></section>
+<details class="activity">
+  <summary><span class="title">J8 · Non egin dut hobekuntza handiena?</span><span class="phase">AMAIERA</span></summary>
+  <div class="content">
+    <p>Hasierako ideiak eta azken diseinua alderatu.</p>
+    <a class="btn" href="https://docs.google.com/document/d/1w8g-5Z3G24yeT_NSvKonGUMPp3Gmgptzfd16qqRHbww/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
+    <div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div>
+  </div>
+</details>
+
+<section class="success">
+  <h3>Nola jakingo duzu ondo egin duzula?</h3>
+  <ul>
+    <li>Zirkuitu baten osagaiak eta haien funtzioa zuzen azaltzen badituzu.</li>
+    <li>Tentsioa eta korrontea neurtu edo simulatu eta datuak modu egokian antolatzen badituzu.</li>
+    <li>Datuetatik grafiko ulergarri bat sortu eta interpretatzen baduzu.</li>
+    <li>Zirkuituaren funtzionamendua, grafikoa eta diseinu teknikoa azalpen koherente batean lotzen badituzu.</li>
+  </ul>
+</section>
 
 <p class="muted">Zientzia eta Teknologia Eremua · Curriculum Aniztasuna</p>
-</div></body></html>
+</div>
+</body>
+</html>
