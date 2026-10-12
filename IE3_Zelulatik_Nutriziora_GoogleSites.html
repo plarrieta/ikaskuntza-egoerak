@@ -1,8 +1,9 @@
-<!doctype html><!-- J6_LINKS_VERIFIED_2026-10-11 -->
+<!DOCTYPE html>
+<!-- J6_LINKS_VERIFIED_2026-10-11 -->
 <html lang="eu">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>IE3 — Zelulatik nutriziora</title>
 <style>
 :root{
@@ -145,106 +146,195 @@ details.activity[open] summary::before{transform:rotate(90deg)}
   .meta{grid-template-columns:1fr}
   body{padding:10px}
 }
+
+/* IRAKASLEAREN IKUSPEGIA · formatu bateratua */
+.teacher-summary{
+  background:#fffdf8;
+  border:1px solid #e7d7b4;
+  border-radius:14px;
+  margin:14px 0;
+  overflow:hidden;
+}
+.teacher-summary > summary{
+  cursor:pointer;
+  list-style:none;
+  padding:13px 15px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#5f4a24;
+  background:#fffaf0;
+}
+.teacher-summary > summary::-webkit-details-marker{display:none}
+.teacher-summary > summary::before{
+  content:"›";
+  font-size:22px;
+  line-height:1;
+  color:#9a6a22;
+  transition:transform .18s ease;
+}
+.teacher-summary[open] > summary::before{transform:rotate(90deg)}
+.teacher-tag{
+  margin-left:auto;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.04em;
+  color:#8a6a2f;
+}
+.teacher-body{
+  border-top:1px solid #eadfc8;
+  padding:14px 15px 15px;
+  font-size:13px;
+  line-height:1.45;
+}
+.teacher-goal{
+  background:#fff;
+  border-left:4px solid #9a6a22;
+  padding:10px 12px;
+  border-radius:7px;
+  margin-bottom:10px;
+}
+.teacher-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.teacher-box{
+  background:#fff;
+  border:1px solid #eee5d4;
+  border-radius:10px;
+  padding:10px 12px;
+}
+.teacher-box h4{
+  margin:0 0 6px;
+  font-size:12px;
+  color:#795a22;
+  text-transform:uppercase;
+}
+.teacher-box p{margin:0}
+.teacher-wide{grid-column:1/-1}
+.teacher-note{
+  margin-top:10px;
+  background:#f7f9fb;
+  border-left:4px solid #667085;
+  padding:9px 11px;
+  border-radius:7px;
+}
+@media(max-width:650px){
+  .teacher-grid{grid-template-columns:1fr}
+  .teacher-wide{grid-column:auto}
+  .teacher-tag{display:none}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="hero">
-    <h1>IE3 · Zelulatik nutriziora</h1>
-    <b>Galdera gidaria:</b> Nola iristen dira mantenugaiak eta oxigenoa zeluletara, eta nola kanporatzen dira hondakinak?
+<div class="hero">
+<h1>IE3 · Zelulatik nutriziora</h1>
+<b>Galdera gidaria:</b> Nola iristen dira mantenugaiak eta oxigenoa zeluletara, eta nola kanporatzen dira hondakinak?
   </div>
-
-  <div class="meta">
-    <div><b>ERRONKA</b><br>Gorputzeko lau aparatuek elkarrekin nola lan egiten duten ulertzea.</div>
-    <div><b>ZER LANDUKO DUGU?</b><br>Digestioa, arnasketa, zirkulazioa, iraizketa eta zelula-arnasketa.</div>
-    <div><b>AZKEN PRODUKTUA</b><br>“Mantenugai baten bidaia” mapa bisual narratua.</div>
-    <div><b>DENBORA</b><br>15–16 saio inguru.</div>
-  </div>
-
-  <h2>Jarduerak</h2>
-
-  <details class="activity">
-    <summary><span class="title">J1 · Ogitarteko baten misterioa</span><span class="phase">HASIERA</span></summary>
-    <div class="content">
-      <p>Zure hasierako ideiak marraztu eta azaldu.</p>
-      <a class="btn" href="https://docs.google.com/document/d/1mf-BnD-koS_pXLSLPsqKitftBIsER93AuR6SWC7T6dM/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-      <div class="deliver"><b>Entregatu behar duzuna:</b> Hasierako marrazkia + 4 erantzunak.</div>
-    </div>
-  </details>
-
-  <details class="activity">
-    <summary><span class="title">J2 · Lau aparatu, helburu bakarra</span><span class="phase">HASIERA</span></summary>
-    <div class="content">
-      <p>Lau aparatuen lehen sistema-mapa osatu.</p>
-      <a class="btn" href="https://docs.google.com/document/d/1oRE9wW7iiIeTiZKBjcb0NngQEAeCtXbF8HSf0ZRPXrY/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-      <div class="deliver"><b>Entregatu behar duzuna:</b> Sistema-mapa + 2 galdera.</div>
-    </div>
-  </details>
-
-  <details class="activity">
-    <summary><span class="title">J3 · Mantenugaiaren arrastoa</span><span class="phase">GARAPENA</span></summary>
-    <div class="content">
-      <p>Glukosaren ibilbidea digestio-aparatutik odolera jarraitu.</p>
-      <a class="btn" href="https://docs.google.com/document/d/1cBwifdmawi6wLQ-EVSiyT1NsbnbeJz1i-HTL_OhLU8c/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-      <div class="deliver"><b>Entregatu behar duzuna:</b> Ibilbide-eskema + taula + azalpena.</div>
-    </div>
-  </details>
-
-  <details class="activity">
-    <summary><span class="title">J4 · Oxigenoaren bidaiaren ikerketa</span><span class="phase">GARAPENA</span></summary>
-    <div class="content">
-      <p>Albeoloetako gas-trukea eta O₂-ren bidea ikertu.</p>
-      <a class="btn" href="https://docs.google.com/document/d/1kvCEE1Lg0DTn3H7J_H3GuCkA5nyBTT0a5qX0ZN3WjVQ/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-      <a class="btn secondary" href="https://scisim.org/sims/biology/gas_exchange" target="_blank" rel="noopener">IREKI 3D ALBEOLOA</a>
-      <div class="deliver"><b>Entregatu behar duzuna:</b> Bi koloreko eskema + erantzunak.</div>
-    </div>
-  </details>
-
-  <details class="activity">
-    <summary><span class="title">J5 · Zeluletatik kanpora</span><span class="phase">GARAPENA</span></summary>
-    <div class="content">
-      <p>Odolaren garraioa eta hondakinen kanporaketa lotu.</p>
-      <a class="btn" href="https://docs.google.com/document/d/1oN_u5nRdR_G3-GiO-8_4gYOKm9G1VI2yygOBdm25iEk/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-      <div class="deliver"><b>Entregatu behar duzuna:</b> Hondakinen taula + ondorioa.</div>
-    </div>
-  </details>
-
-  <details class="activity final-product">
-    <summary><span class="title">J6 · Mantenugai baten bidaia</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
-    <div class="content">
-      <div class="final-intro">
-        <span class="final-badge">AZKEN PRODUKTUA</span><br>
-        <b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br>
+<div class="meta">
+<div><b>ERRONKA</b><br/>Gorputzeko lau aparatuek elkarrekin nola lan egiten duten ulertzea.</div>
+<div><b>ZER LANDUKO DUGU?</b><br/>Digestioa, arnasketa, zirkulazioa, iraizketa eta zelula-arnasketa.</div>
+<div><b>AZKEN PRODUKTUA</b><br/>“Mantenugai baten bidaia” mapa bisual narratua.</div>
+<div><b>DENBORA</b><br/>15–16 saio inguru.</div>
+</div>
+<details class="teacher-summary">
+<summary>Irakaslearen ikuspegia <span class="teacher-tag">PROGRAMAZIOAREKIN LOTURA</span></summary>
+<div class="teacher-body">
+<div class="teacher-goal"><b>Helburu didaktikoa:</b> Zelula giza gorputzaren unitate gisa ulertzea; digestio-, arnas-, zirkulazio- eta iraitz-aparatuen egitura eta funtzio nagusiak erlazionatzea; mantenugaien, gasen eta hondakinen trukea azaltzea; ohitura osasungarriak arrazoitzea eta informazioa eskema eta azalpenen bidez komunikatzea.</div>
+<div class="teacher-grid">
+<div class="teacher-box">
+<h4>Konpetentzia espezifikoak</h4>
+<p>KE1, KE3, KE5, KE6, KE7</p>
+</div>
+<div class="teacher-box">
+<h4>Ebaluazio-irizpideak</h4>
+<p>1.1–1.3 Egoera biologikoak identifikatu, informazio fidagarria hautatu eta hiztegi zientifikoa erabiltzea. 3.4 Ohiturek organismoan dituzten efektuak ebaluatu eta ohitura osasungarriak proposatzea. 5.1, 5.3, 5.4 Informazioa kritikoki interpretatu, emaitzak komunikatu eta iturri fidagarriak erabiltzea. 6.2–6.3 Sistema biologikoen arteko konexioak eta prozedura zientifikoak erabiltzea. 7.1–7.2 Ikaskuntza-prozesua berrikustea.</p>
+</div>
+<div class="teacher-box teacher-wide">
+<h4>Oinarrizko jakintzak</h4>
+<p>J) GIZA GORPUTZA ETA OSASUNA<br/>• Zelula giza gorputzaren egitura- eta funtzio-unitate gisa.<br/>• Nutrizioa: digestio-, arnas-, zirkulazio- eta iraitz-aparatuen anatomia/fisiologia eta erlazioa.<br/>• Ohitura osasungarriak. A) TREBETASUN ZIENTIFIKO-TEKNOLOGIKOAK<br/>• Informazioa interpretatu, ekoitzi eta komunikatzea. L) ZENTZU SOZIOAFEKTIBOA<br/>• Autonomia eta autoebaluazioa.</p>
+</div>
+</div>
+<div class="teacher-note"><b>Ebaluazioaren logika:</b> J1–J2 diagnostikoak dira eta ez dira zuzenean kalifikatzen; J3–J5 garapen-ebidentziak dira; J6 azken produktu integratua da eta errubrikaz baloratzen da; J7 banakako egiaztapena da eta ez da orri publikoan estekatzen; J8 autoebaluazioa eta prozesuaren berrikuspena da.</div>
+</div>
+</details><h2>Jarduerak</h2>
+<details class="activity">
+<summary><span class="title">J1 · Ogitarteko baten misterioa</span><span class="phase">HASIERA</span></summary>
+<div class="content">
+<p>Zure hasierako ideiak marraztu eta azaldu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1mf-BnD-koS_pXLSLPsqKitftBIsER93AuR6SWC7T6dM/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="deliver"><b>Entregatu behar duzuna:</b> Hasierako marrazkia + 4 erantzunak.</div>
+</div>
+</details>
+<details class="activity">
+<summary><span class="title">J2 · Lau aparatu, helburu bakarra</span><span class="phase">HASIERA</span></summary>
+<div class="content">
+<p>Lau aparatuen lehen sistema-mapa osatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1oRE9wW7iiIeTiZKBjcb0NngQEAeCtXbF8HSf0ZRPXrY/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="deliver"><b>Entregatu behar duzuna:</b> Sistema-mapa + 2 galdera.</div>
+</div>
+</details>
+<details class="activity">
+<summary><span class="title">J3 · Mantenugaiaren arrastoa</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Glukosaren ibilbidea digestio-aparatutik odolera jarraitu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1cBwifdmawi6wLQ-EVSiyT1NsbnbeJz1i-HTL_OhLU8c/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="deliver"><b>Entregatu behar duzuna:</b> Ibilbide-eskema + taula + azalpena.</div>
+</div>
+</details>
+<details class="activity">
+<summary><span class="title">J4 · Oxigenoaren bidaiaren ikerketa</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Albeoloetako gas-trukea eta O₂-ren bidea ikertu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1kvCEE1Lg0DTn3H7J_H3GuCkA5nyBTT0a5qX0ZN3WjVQ/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<a class="btn secondary" href="https://scisim.org/sims/biology/gas_exchange" rel="noopener" target="_blank">IREKI 3D ALBEOLOA</a>
+<div class="deliver"><b>Entregatu behar duzuna:</b> Bi koloreko eskema + erantzunak.</div>
+</div>
+</details>
+<details class="activity">
+<summary><span class="title">J5 · Zeluletatik kanpora</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Odolaren garraioa eta hondakinen kanporaketa lotu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1oN_u5nRdR_G3-GiO-8_4gYOKm9G1VI2yygOBdm25iEk/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="deliver"><b>Entregatu behar duzuna:</b> Hondakinen taula + ondorioa.</div>
+</div>
+</details>
+<details class="activity final-product">
+<summary><span class="title">J6 · Mantenugai baten bidaia</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
+<div class="content">
+<div class="final-intro">
+<span class="final-badge">AZKEN PRODUKTUA</span><br/>
+<b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br/>
         Azken mapa bisual narratua sortu, mantenugaiaren eta oxigenoaren ibilbideak eta lau aparatuen arteko lotura azalduz.
       </div>
-      <a class="btn" href="https://docs.google.com/document/d/1o-Zq7JYd9JQCnEWyCe228-1etGCHBIPNg88asu68Dps/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-      <a class="btn secondary" href="https://docs.google.com/document/d/1XN3rL2xGJrgWg-GgJBVuAjAvFbs9FKULY_vCVpAdZf0/edit?usp=drive_link" target="_blank" rel="noopener">IREKI ERRUBRIKA</a>
-      <div class="deliver"><b>Entregatu behar duzuna:</b> Mapa + kontakizuna + azken azalpena.</div>
-    </div>
-  </details>
-
-  <details class="activity">
-    <summary><span class="title">J7 · Banakako egiaztapena</span><span class="phase">AMAIERA</span></summary>
-    <div class="content">
-      <p>Irakasleak gelan emango du.</p>
-      <p><b>🔒 Irakasleak gelan emango du.</b></p>
-      <div class="deliver"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
-    </div>
-  </details>
-
-  <details class="activity">
-    <summary><span class="title">J8 · Zer aldatu da nire azalpenetan?</span><span class="phase">AMAIERA</span></summary>
-    <div class="content">
-      <p>J1eko ideiak eta orain dakizuna alderatu.</p>
-      <a class="btn" href="https://docs.google.com/document/d/14-hXrd2RHFe2qg5TGlRYuPY2BzGh0lKKJDNH8FIcx4g/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-      <div class="deliver"><b>Entregatu behar duzuna:</b> J1/J8 konparazioa + autoebaluazioa.</div>
-    </div>
-  </details>
-
-  <div class="success">
-    <h3>Nola jakingo duzu ondo egin duzula?</h3>
-    <p>Glukosaren eta oxigenoaren ibilbideak bereizten dituzu; odolaren garraio-funtzioa azaltzen duzu; gasen trukea eta hondakinen kanporaketa zuzen lotzen dituzu; eta lau aparatuek batera zergatik lan egin behar duten azaltzen duzu.</p>
-  </div>
+<a class="btn" href="https://docs.google.com/document/d/1o-Zq7JYd9JQCnEWyCe228-1etGCHBIPNg88asu68Dps/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<a class="btn secondary" href="https://docs.google.com/document/d/1XN3rL2xGJrgWg-GgJBVuAjAvFbs9FKULY_vCVpAdZf0/edit?usp=drive_link" rel="noopener" target="_blank">IREKI ERRUBRIKA</a>
+<div class="deliver"><b>Entregatu behar duzuna:</b> Mapa + kontakizuna + azken azalpena.</div>
+</div>
+</details>
+<details class="activity">
+<summary><span class="title">J7 · Banakako egiaztapena</span><span class="phase">AMAIERA</span></summary>
+<div class="content">
+<p>Irakasleak gelan emango du.</p>
+<p><b>🔒 Irakasleak gelan emango du.</b></p>
+<div class="deliver"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
+</div>
+</details>
+<details class="activity">
+<summary><span class="title">J8 · Zer aldatu da nire azalpenetan?</span><span class="phase">AMAIERA</span></summary>
+<div class="content">
+<p>J1eko ideiak eta orain dakizuna alderatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/14-hXrd2RHFe2qg5TGlRYuPY2BzGh0lKKJDNH8FIcx4g/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="deliver"><b>Entregatu behar duzuna:</b> J1/J8 konparazioa + autoebaluazioa.</div>
+</div>
+</details>
+<div class="success">
+<h3>Nola jakingo duzu ondo egin duzula?</h3>
+<p>Glukosaren eta oxigenoaren ibilbideak bereizten dituzu; odolaren garraio-funtzioa azaltzen duzu; gasen trukea eta hondakinen kanporaketa zuzen lotzen dituzu; eta lau aparatuek batera zergatik lan egin behar duten azaltzen duzu.</p>
+</div>
 </div>
 </body>
 </html>

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="eu">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>IE12 · Zenbat kontsumitzen dugu?</title>
 <style>
 :root{
@@ -151,111 +152,198 @@ details.activity[open] summary::before{transform:rotate(90deg)}
 @media(max-width:450px){
   .meta{grid-template-columns:1fr}
 }
+
+/* IRAKASLEAREN IKUSPEGIA · formatu bateratua */
+.teacher-summary{
+  background:#fffdf8;
+  border:1px solid #e7d7b4;
+  border-radius:14px;
+  margin:14px 0;
+  overflow:hidden;
+}
+.teacher-summary > summary{
+  cursor:pointer;
+  list-style:none;
+  padding:13px 15px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#5f4a24;
+  background:#fffaf0;
+}
+.teacher-summary > summary::-webkit-details-marker{display:none}
+.teacher-summary > summary::before{
+  content:"›";
+  font-size:22px;
+  line-height:1;
+  color:#9a6a22;
+  transition:transform .18s ease;
+}
+.teacher-summary[open] > summary::before{transform:rotate(90deg)}
+.teacher-tag{
+  margin-left:auto;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.04em;
+  color:#8a6a2f;
+}
+.teacher-body{
+  border-top:1px solid #eadfc8;
+  padding:14px 15px 15px;
+  font-size:13px;
+  line-height:1.45;
+}
+.teacher-goal{
+  background:#fff;
+  border-left:4px solid #9a6a22;
+  padding:10px 12px;
+  border-radius:7px;
+  margin-bottom:10px;
+}
+.teacher-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.teacher-box{
+  background:#fff;
+  border:1px solid #eee5d4;
+  border-radius:10px;
+  padding:10px 12px;
+}
+.teacher-box h4{
+  margin:0 0 6px;
+  font-size:12px;
+  color:#795a22;
+  text-transform:uppercase;
+}
+.teacher-box p{margin:0}
+.teacher-wide{grid-column:1/-1}
+.teacher-note{
+  margin-top:10px;
+  background:#f7f9fb;
+  border-left:4px solid #667085;
+  padding:9px 11px;
+  border-radius:7px;
+}
+@media(max-width:650px){
+  .teacher-grid{grid-template-columns:1fr}
+  .teacher-wide{grid-column:auto}
+  .teacher-tag{display:none}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-
 <section class="hero">
-  <h1>IE12 · Zenbat kontsumitzen dugu?</h1>
-  <p><b>Galdera gidaria:</b> Gure eguneroko ohiturek zenbat energia eta baliabide kontsumitzen dituzte, eta zer egin dezakegu gutxiago kontsumitzeko?</p>
+<h1>IE12 · Zenbat kontsumitzen dugu?</h1>
+<p><b>Galdera gidaria:</b> Gure eguneroko ohiturek zenbat energia eta baliabide kontsumitzen dituzte, eta zer egin dezakegu gutxiago kontsumitzeko?</p>
 </section>
-
 <div class="meta">
-  <div class="m"><b>ERRONKA</b><p>Kontsumoa datuekin aztertu eta hobekuntza-neurriak proposatzea.</p></div>
-  <div class="m"><b>ZER LANDUKO DUGU?</b><p>Kontsumo-datuak, estatistika, grafikoak, energia, ingurumen-eragina eta jasangarritasuna.</p></div>
-  <div class="m"><b>AZKEN PRODUKTUA</b><p>Kontsumoaren datu-panela / infografia / aurkezpena.</p></div>
-  <div class="m"><b>DENBORA</b><p>16 saio inguru.</p></div>
+<div class="m"><b>ERRONKA</b><p>Kontsumoa datuekin aztertu eta hobekuntza-neurriak proposatzea.</p></div>
+<div class="m"><b>ZER LANDUKO DUGU?</b><p>Kontsumo-datuak, estatistika, grafikoak, energia, ingurumen-eragina eta jasangarritasuna.</p></div>
+<div class="m"><b>AZKEN PRODUKTUA</b><p>Kontsumoaren datu-panela / infografia / aurkezpena.</p></div>
+<div class="m"><b>DENBORA</b><p>16 saio inguru.</p></div>
 </div>
-
-<h2>Jarduerak</h2>
-
+<details class="teacher-summary">
+<summary>Irakaslearen ikuspegia <span class="teacher-tag">PROGRAMAZIOAREKIN LOTURA</span></summary>
+<div class="teacher-body">
+<div class="teacher-goal"><b>Helburu didaktikoa:</b> Kontsumo-datuak bildu, antolatu eta interpretatzea; taula, grafiko eta parametro estatistikoak erabiltzea; energia- eta ur-kontsumoa atmosfera, hidrosfera eta ingurumen-ondorioekin lotzea; eta datuetan oinarritutako proposamen jasangarriak egitea.</div>
+<div class="teacher-grid">
+<div class="teacher-box">
+<h4>Konpetentzia espezifikoak</h4>
+<p>KE1, KE3, KE4, KE5, KE6, KE7</p>
+</div>
+<div class="teacher-box">
+<h4>Ebaluazio-irizpideak</h4>
+<p>1.1–1.3 Datu zientifiko-matematikoak identifikatu, hautatu eta interpretatzea. 3.4 Banakako ekintzen ingurumen-ondorioak ebaluatu eta ohitura jasangarriak proposatzea. 4.4 Tresna digitalekin datuak tratatu eta edukiak sortzea. 4.5 Teknologiaren eta energiaren ingurumen-eragina baloratzea. 5.1–5.4 Informazioa kritikoki aztertu, datuekin ebazpenak egin eta emaitzak komunikatzea. 6.2–6.3 Ezagutza-eremuen arteko konexioak egitea. 7.1–7.2 Akats eta ondorioen berrikuspena.</p>
+</div>
+<div class="teacher-box teacher-wide">
+<h4>Oinarrizko jakintzak</h4>
+<p>G) ZENTZU ESTOKASTIKOA<br/>• Azterlan estatistikoak, taulak, grafikoak eta parametroak.<br/>• Informazio estatistikoaren analisi kritikoa. I) INTERAKZIOAK ETA ENERGIA<br/>• Energia kontsumoa eta ingurumen-ondorioak. K) LURRA SISTEMA GISA ETA GARAPEN JASANGARRIA<br/>• Atmosfera eta hidrosfera; energia- eta ur-kontsumoa, klima-aldaketa eta ekintza jasangarriak. F) DIGITALIZAZIOA<br/>• Kalkulu-orriak eta datuen erabilera arduratsua. A) TREBETASUN ZIENTIFIKO-TEKNOLOGIKOAK.</p>
+</div>
+</div>
+<div class="teacher-note"><b>Ebaluazioaren logika:</b> J1–J2 diagnostikoak dira eta ez dira zuzenean kalifikatzen; J3–J5 garapen-ebidentziak dira; J6 azken produktu integratua da eta errubrikaz baloratzen da; J7 banakako egiaztapena da eta ez da orri publikoan estekatzen; J8 autoebaluazioa eta prozesuaren berrikuspena da.</div>
+</div>
+</details><h2>Jarduerak</h2>
 <details class="activity">
-  <summary><span class="title">J1 · Zenbat kontsumitzen dugu?</span><span class="phase">HASIERA</span></summary>
-  <div class="content">
-    <p>Etxeko edo ikastetxeko kontsumoa estimatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1pgPEslahYp55fp-UWX2KC5UFUUipqOFo4seFTteTmMg/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Hasierako estimazio-taula.</div>
-  </div>
+<summary><span class="title">J1 · Zenbat kontsumitzen dugu?</span><span class="phase">HASIERA</span></summary>
+<div class="content">
+<p>Etxeko edo ikastetxeko kontsumoa estimatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1pgPEslahYp55fp-UWX2KC5UFUUipqOFo4seFTteTmMg/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Hasierako estimazio-taula.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J2 · Datuak irakurtzen ikasi</span><span class="phase">HASIERA</span></summary>
-  <div class="content">
-    <p>Kontsumo-datuak interpretatu eta lehen ondorioak atera.</p>
-    <a class="btn" href="https://docs.google.com/document/d/18-LwsrWmNZw5tpCu4mdtHkzLoU06pVrrRavryfGUzR0/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Kalkuluak + grafiko-hautaketa + ondorioa.</div>
-  </div>
+<summary><span class="title">J2 · Datuak irakurtzen ikasi</span><span class="phase">HASIERA</span></summary>
+<div class="content">
+<p>Kontsumo-datuak interpretatu eta lehen ondorioak atera.</p>
+<a class="btn" href="https://docs.google.com/document/d/18-LwsrWmNZw5tpCu4mdtHkzLoU06pVrrRavryfGUzR0/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Kalkuluak + grafiko-hautaketa + ondorioa.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J3 · Kontsumo-datuak antolatzen</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Datuak kalkulu-orrian antolatu eta oinarrizko kalkuluak egin.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1-0HyKIV84u8DC_Ev1hsnl92DixxztM2YYduVr5wBbFs/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Datu-taula + guztizkoa + batezbestekoa + max/min.</div>
-  </div>
+<summary><span class="title">J3 · Kontsumo-datuak antolatzen</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Datuak kalkulu-orrian antolatu eta oinarrizko kalkuluak egin.</p>
+<a class="btn" href="https://docs.google.com/document/d/1-0HyKIV84u8DC_Ev1hsnl92DixxztM2YYduVr5wBbFs/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Datu-taula + guztizkoa + batezbestekoa + max/min.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J4 · Grafikoak eta parametro estatistikoak</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Datuak irudikatu eta estatistika deskribatzailea aplikatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/12Viq3khmm9BU9ijSec96hNv42TTeogHDfQbKqjEcv14/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Grafikoa + kalkuluak + ondorioak.</div>
-  </div>
+<summary><span class="title">J4 · Grafikoak eta parametro estatistikoak</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Datuak irudikatu eta estatistika deskribatzailea aplikatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/12Viq3khmm9BU9ijSec96hNv42TTeogHDfQbKqjEcv14/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Grafikoa + kalkuluak + ondorioak.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J5 · Kontsumotik ingurumen-eraginera</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Kontsumoa ingurumen-ondorioekin eta hobekuntza-neurriekin lotu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1GHMy9SGg56FlPlK8I7GqwIlEWhIh-E_VtL0kA4midJA/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Eragin-taula + proposamen arrazoitua.</div>
-  </div>
+<summary><span class="title">J5 · Kontsumotik ingurumen-eraginera</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Kontsumoa ingurumen-ondorioekin eta hobekuntza-neurriekin lotu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1GHMy9SGg56FlPlK8I7GqwIlEWhIh-E_VtL0kA4midJA/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Eragin-taula + proposamen arrazoitua.</div>
+</div>
 </details>
-
 <details class="activity final-product">
-  <summary><span class="title">J6 · Kontsumoaren datu-panela</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
-  <div class="content">
-    <div class="final-intro">
-      <span class="final-badge">AZKEN PRODUKTUA</span><br>
-      <b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br>
+<summary><span class="title">J6 · Kontsumoaren datu-panela</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
+<div class="content">
+<div class="final-intro">
+<span class="final-badge">AZKEN PRODUKTUA</span><br/>
+<b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br/>
       Azterlan estatistikoa, grafikoak, ondorioak eta hobekuntza-neurriak euskarri digital bakar batean bateratu.
     </div>
-    <a class="btn" href="https://docs.google.com/document/d/1EAaKYG6MTuSNB0zcuJ9rt_03uAkxTGedTK9WTd8JnEo/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <a class="btn secondary" href="https://docs.google.com/document/d/1XaqCzDcK0OO0KFEbAhzHd5eInZT5dEGZxx1GzEjfsXM/edit?usp=drive_link" target="_blank" rel="noopener">IREKI ERRUBRIKA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Datu-panela/infografia/aurkezpena + hobekuntza-plana.</div>
-  </div>
+<a class="btn" href="https://docs.google.com/document/d/1EAaKYG6MTuSNB0zcuJ9rt_03uAkxTGedTK9WTd8JnEo/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<a class="btn secondary" href="https://docs.google.com/document/d/1XaqCzDcK0OO0KFEbAhzHd5eInZT5dEGZxx1GzEjfsXM/edit?usp=drive_link" rel="noopener" target="_blank">IREKI ERRUBRIKA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Datu-panela/infografia/aurkezpena + hobekuntza-plana.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J7 · Banakako egiaztapen-proba</span><span class="phase">AMAIERA</span></summary>
-  <div class="content">
-    <p>Irakasleak emango du gelan.</p>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
-  </div>
+<summary><span class="title">J7 · Banakako egiaztapen-proba</span><span class="phase">AMAIERA</span></summary>
+<div class="content">
+<p>Irakasleak emango du gelan.</p>
+<div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J8 · Zer aldatu dut nire kontsumoari buruzko ikuspegian?</span><span class="phase">AMAIERA</span></summary>
-  <div class="content">
-    <p>Hasierako estimazioak eta azken ondorioak alderatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/14axqz_uRbK3lJhp69kTFNFJuhKDr0CKDDRJTjbgWnro/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div>
-  </div>
+<summary><span class="title">J8 · Zer aldatu dut nire kontsumoari buruzko ikuspegian?</span><span class="phase">AMAIERA</span></summary>
+<div class="content">
+<p>Hasierako estimazioak eta azken ondorioak alderatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/14axqz_uRbK3lJhp69kTFNFJuhKDr0CKDDRJTjbgWnro/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div>
+</div>
 </details>
-
 <section class="success">
-  <h3>Nola jakingo duzu ondo egin duzula?</h3>
-  <ul>
-    <li>Kontsumo-datuak modu ordenatuan bildu eta kalkulu egokiak egiten badituzu.</li>
-    <li>Datuetarako grafiko egokia aukeratu eta zuzen interpretatzen baduzu.</li>
-    <li>Batezbestekoa, maximoa eta minimoa bezalako parametroak erabiltzen badituzu ondorioak ateratzeko.</li>
-    <li>Kontsumoa ingurumen-eraginarekin lotu eta datuetan oinarritutako hobekuntza-neurri errealistak proposatzen badituzu.</li>
-  </ul>
+<h3>Nola jakingo duzu ondo egin duzula?</h3>
+<ul>
+<li>Kontsumo-datuak modu ordenatuan bildu eta kalkulu egokiak egiten badituzu.</li>
+<li>Datuetarako grafiko egokia aukeratu eta zuzen interpretatzen baduzu.</li>
+<li>Batezbestekoa, maximoa eta minimoa bezalako parametroak erabiltzen badituzu ondorioak ateratzeko.</li>
+<li>Kontsumoa ingurumen-eraginarekin lotu eta datuetan oinarritutako hobekuntza-neurri errealistak proposatzen badituzu.</li>
+</ul>
 </section>
-
 <p class="muted">Zientzia eta Teknologia Eremua · Curriculum Aniztasuna</p>
 </div>
 </body>

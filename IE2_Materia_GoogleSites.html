@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="eu">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>IE2 · Materia eraldatzen dugu</title>
 <style>
 :root{
@@ -35,7 +36,7 @@ summary::-webkit-details-marker{display:none}
 .resource-btn:hover{background:var(--btnhover)}
 .resource-btn.secondary{background:#475467}.resource-btn.secondary:hover{background:#344054}
 .no-link{display:inline-block;padding:9px 13px;border-radius:10px;background:#f2f4f7;color:#667085;font-size:13px;font-weight:700}
-.teacher{display:none}body.teacher-mode .teacher{display:block}body.teacher-mode .student-only{display:none}
+
 .teacher-card{background:var(--teacher);border:1px solid #f2d49a}
 table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}th{background:#f8fafc}
 .footer{color:var(--muted);font-size:13px;text-align:center;padding:24px 0}
@@ -57,268 +58,213 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid 
 .final-product .resource-btn.secondary:hover{background:#fff5e6}
 .final-product .final-submit{background:#fff0d8;border-left-color:#c97816}
 
+
+/* IRAKASLEAREN IKUSPEGIA · formatu bateratua */
+.teacher-summary{
+  background:#fffdf8;
+  border:1px solid #e7d7b4;
+  border-radius:14px;
+  margin:14px 0;
+  overflow:hidden;
+}
+.teacher-summary > summary{
+  cursor:pointer;
+  list-style:none;
+  padding:13px 15px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#5f4a24;
+  background:#fffaf0;
+}
+.teacher-summary > summary::-webkit-details-marker{display:none}
+.teacher-summary > summary::before{
+  content:"›";
+  font-size:22px;
+  line-height:1;
+  color:#9a6a22;
+  transition:transform .18s ease;
+}
+.teacher-summary[open] > summary::before{transform:rotate(90deg)}
+.teacher-tag{
+  margin-left:auto;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.04em;
+  color:#8a6a2f;
+}
+.teacher-body{
+  border-top:1px solid #eadfc8;
+  padding:14px 15px 15px;
+  font-size:13px;
+  line-height:1.45;
+}
+.teacher-goal{
+  background:#fff;
+  border-left:4px solid #9a6a22;
+  padding:10px 12px;
+  border-radius:7px;
+  margin-bottom:10px;
+}
+.teacher-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.teacher-box{
+  background:#fff;
+  border:1px solid #eee5d4;
+  border-radius:10px;
+  padding:10px 12px;
+}
+.teacher-box h4{
+  margin:0 0 6px;
+  font-size:12px;
+  color:#795a22;
+  text-transform:uppercase;
+}
+.teacher-box p{margin:0}
+.teacher-wide{grid-column:1/-1}
+.teacher-note{
+  margin-top:10px;
+  background:#f7f9fb;
+  border-left:4px solid #667085;
+  padding:9px 11px;
+  border-radius:7px;
+}
+@media(max-width:650px){
+  .teacher-grid{grid-template-columns:1fr}
+  .teacher-wide{grid-column:auto}
+  .teacher-tag{display:none}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-
 <section class="hero">
-  <h1>IE2 · Materia eraldatzen dugu</h1>
-  <p>Ikaskuntza-egoera · 1. ebaluazioa · 15 saio inguru</p>
+<h1>IE2 · Materia eraldatzen dugu</h1>
+<p>Ikaskuntza-egoera · 15 saio inguru</p>
 </section>
 
-<div class="switch">
-  <button id="studentBtn" class="active" onclick="setMode('student')">👨‍🎓 Ikaslea</button>
-  <button id="teacherBtn" onclick="setMode('teacher')">👨‍🏫 Irakaslea</button>
+
+<div class="grid">
+<div class="mini"><h3>ERRONKA</h3><p>Nola bereizten ditugu aldaketa fisikoak eta kimikoak, eta nola azaltzen ditugu materiaren eraldaketak?</p></div>
+<div class="mini"><h3>ZER LANDUKO DUGU?</h3><p>Elementuak, konposatuak, aldaketa fisiko eta kimikoak, erreakzioak eta kalkulu sinpleak.</p></div>
+<div class="mini"><h3>AZKEN PRODUKTUA</h3><p>Materia baten edo eraldaketa baten ikerketa-fitxa grafikoa edo infografia.</p></div>
+<div class="mini"><h3>DENBORA</h3><p>15 saio inguru.</p></div>
 </div>
-
-<div class="student-only">
-  <div class="grid">
-    <div class="mini"><h3>ERRONKA</h3><p>Nola bereizten ditugu aldaketa fisikoak eta kimikoak, eta nola azaltzen ditugu materiaren eraldaketak?</p></div>
-    <div class="mini"><h3>ZER LANDUKO DUGU?</h3><p>Elementuak, konposatuak, aldaketa fisiko eta kimikoak, erreakzioak eta kalkulu sinpleak.</p></div>
-    <div class="mini"><h3>AZKEN PRODUKTUA</h3><p>Materia baten edo eraldaketa baten ikerketa-fitxa grafikoa edo infografia.</p></div>
-    <div class="mini"><h3>DENBORA</h3><p>15 saio inguru.</p></div>
-  </div>
-
-  <section class="section">
-    <h2>Jarduerak</h2>
-
-    <details>
-      <summary><span class="num">1</span>Aldaketa ala eraldaketa?<span class="phase">HASIERA</span></summary>
-      <div class="content">
-        <div class="box"><b>Zer egin behar duzu?</b><br>Sailkatu eguneroko hainbat aldaketa: izotza urtzea, azukrea disolbatzea, burdina herdoiltzea, papera erretzea... eta azaldu zure irizpidea.</div>
-        <div class="help"><a class="resource-btn" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1mSCgkRZD8oAjQKGyryNlKxdcQgDq1VP6ICRXXRmP5SQ/edit?usp=drive_link">📄 IREKI FITXA</a></div>
-        <div class="box submit"><b>Entregatu behar duzuna:</b><br>Sailkapen-fitxa eta hasierako azalpenak.</div>
-      </div>
-    </details>
-
-    <details>
-      <summary><span class="num">2</span>Zer dago materiaren barruan?<span class="phase">HASIERA</span></summary>
-      <div class="content">
-        <div class="box"><b>Zer egin behar duzu?</b><br>Lotu atomo, molekula, elementu eta konposatu kontzeptuak eta antolatu haien arteko harremanak.</div>
-        <div class="help"><a class="resource-btn" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1z0uTExUPIRQm8vxMt1KxCDUghNExTcuGSs-dKsErJT4/edit?usp=drive_link">📄 IREKI FITXA</a></div>
-        <div class="box submit"><b>Entregatu behar duzuna:</b><br>Kontzeptu-mapa.</div>
-      </div>
-    </details>
-
-    <details>
-      <summary><span class="num">3</span>Elementuak eta konposatuak<span class="phase">GARAPENA</span></summary>
-      <div class="content">
-        <div class="box"><b>Zer egin behar duzu?</b><br>Aztertu elementu eta konposatuen ikurrak, formulak eta egiturak, eta sailkatu adibideak.</div>
-        <div class="help"><a class="resource-btn" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1JgO60SIQWyYfykEIDeq9iAhGKxlZhLFXOrl4-mxtQi4/edit?usp=drive_link">📄 IREKI FITXA</a></div>
-        <div class="box submit"><b>Entregatu behar duzuna:</b><br>Ariketa-fitxa eta sailkapena.</div>
-      </div>
-    </details>
-
-    <details>
-      <summary><span class="num">4</span>Aldaketa kimikoaren ebidentziak<span class="phase">GARAPENA</span></summary>
-      <div class="content">
-        <div class="box"><b>Zer egin behar duzu?</b><br>Behatu erreakzio kimiko baten seinaleak, jaso datuak eta azaldu zer ebidentziak adierazten duen substantzia berriak sortu direla.</div>
-        <div class="help">
-          <a class="resource-btn" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1d0qgiZOqgowtA-kqNl40BB00MSlYKhqrBU4D3POilp0/edit?usp=drive_link">📄 IREKI JARDUERA</a>
-          <a class="resource-btn secondary" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1yiUDR2IBMTiPUvNMJSh_VdxvBaAGFAMTs-WE9bz1Umk/edit?usp=drive_link">🧪 ESPERIMENTU-GIDA</a>
-        </div>
-        <div class="box submit"><b>Entregatu behar duzuna:</b><br>Behaketa-taula eta txosten laburra.</div>
-      </div>
-    </details>
-
-    <details>
-      <summary><span class="num">5</span>Ekuazio kimikoak eta kalkuluak<span class="phase">GARAPENA</span></summary>
-      <div class="content">
-        <div class="box"><b>Zer egin behar duzu?</b><br>Interpretatu ekuazio kimiko sinpleak eta egin oinarrizko kalkulu kuantitatiboak.</div>
-        <div class="help"><a class="resource-btn" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1mFWkqfQp3H8rCNFryw2NbfWw-vYZB7ebDT7kvUtqhdg/edit?usp=drive_link">📄 IREKI FITXA</a></div>
-        <div class="box submit"><b>Entregatu behar duzuna:</b><br>Kalkulu- eta problema-fitxa.</div>
-      </div>
-    </details>
-
-    <details class="final-product">
-      <summary><span class="num">6</span>Materia eraldatzen dugu · Azken produktua<span class="phase final-phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
-      <div class="content">
-        <div class="final-intro">
-          <span class="final-badge">AZKEN PRODUKTUA</span>
-          <b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br>
+<section class="section">
+<details class="teacher-summary">
+<summary>Irakaslearen ikuspegia <span class="teacher-tag">PROGRAMAZIOAREKIN LOTURA</span></summary>
+<div class="teacher-body">
+<div class="teacher-goal"><b>Helburu didaktikoa:</b> Elementuak eta konposatuak bereiztea; materiaren konposizioa atomoekin lotzea; aldaketa fisiko eta kimikoak bereiztea; ekuazio kimiko errazak interpretatzea; datu eta neurketa sinpleak erabiltzea; emaitzak komunikatzea eta substantzien erabilera segurua sustatzea.</div>
+<div class="teacher-grid">
+<div class="teacher-box">
+<h4>Konpetentzia espezifikoak</h4>
+<p>KE1, KE2, KE5, KE6, KE7</p>
+</div>
+<div class="teacher-box">
+<h4>Ebaluazio-irizpideak</h4>
+<p>1.1–1.3 Egoerak identifikatu, informazio fidagarria hautatu eta terminologia zientifikoa erabiltzea. 2.1–2.3 Eguneroko gertakariak interpretatu eta problemak formulatu/ebaztea. 5.1–5.4 Informazioa kritikoki aztertu, datuekin ebazpenak egin eta emaitzak komunikatzea. 6.2–6.3 Ezagutza-eremuen arteko loturak eta prozedura zientifikoak erabiltzea. 7.1–7.2 Akatsak eta ziurgabetasuna ikaskuntza-aukera gisa hartzea.</p>
+</div>
+<div class="teacher-box teacher-wide">
+<h4>Oinarrizko jakintzak</h4>
+<p>H) MATERIA ETA HAREN ALDAKETAK<br/>• Teoria zinetiko-molekularra; atomoak, elementuak eta konposatuak.<br/>• IUPAC nomenklatura eta ekuazio kimiko errazak.<br/>• Kalkulu estekiometriko errazak eta esperimentazioa. B) ZENBAKIZKO ZENTZUA<br/>• Kalkulu zientifiko sinpleak. A) TREBETASUN ZIENTIFIKO-TEKNOLOGIKOAK<br/>• Hipotesiak, esperimentazioa, neurketa eta segurtasuna. L) ZENTZU SOZIOAFEKTIBOA<br/>• Akatsa eta pertseberantzia.</p>
+</div>
+</div>
+<div class="teacher-note"><b>Ebaluazioaren logika:</b> J1–J2 diagnostikoak dira eta ez dira zuzenean kalifikatzen; J3–J5 garapen-ebidentziak dira; J6 azken produktu integratua da eta errubrikaz baloratzen da; J7 banakako egiaztapena da eta ez da orri publikoan estekatzen; J8 autoebaluazioa eta prozesuaren berrikuspena da.</div>
+</div>
+</details><h2>Jarduerak</h2>
+<details>
+<summary><span class="num">1</span>Aldaketa ala eraldaketa?<span class="phase">HASIERA</span></summary>
+<div class="content">
+<div class="box"><b>Zer egin behar duzu?</b><br/>Sailkatu eguneroko hainbat aldaketa: izotza urtzea, azukrea disolbatzea, burdina herdoiltzea, papera erretzea... eta azaldu zure irizpidea.</div>
+<div class="help"><a class="resource-btn" href="https://docs.google.com/document/d/1mSCgkRZD8oAjQKGyryNlKxdcQgDq1VP6ICRXXRmP5SQ/edit?usp=drive_link" rel="noopener" target="_blank">📄 IREKI FITXA</a></div>
+<div class="box submit"><b>Entregatu behar duzuna:</b><br/>Sailkapen-fitxa eta hasierako azalpenak.</div>
+</div>
+</details>
+<details>
+<summary><span class="num">2</span>Zer dago materiaren barruan?<span class="phase">HASIERA</span></summary>
+<div class="content">
+<div class="box"><b>Zer egin behar duzu?</b><br/>Lotu atomo, molekula, elementu eta konposatu kontzeptuak eta antolatu haien arteko harremanak.</div>
+<div class="help"><a class="resource-btn" href="https://docs.google.com/document/d/1z0uTExUPIRQm8vxMt1KxCDUghNExTcuGSs-dKsErJT4/edit?usp=drive_link" rel="noopener" target="_blank">📄 IREKI FITXA</a></div>
+<div class="box submit"><b>Entregatu behar duzuna:</b><br/>Kontzeptu-mapa.</div>
+</div>
+</details>
+<details>
+<summary><span class="num">3</span>Elementuak eta konposatuak<span class="phase">GARAPENA</span></summary>
+<div class="content">
+<div class="box"><b>Zer egin behar duzu?</b><br/>Aztertu elementu eta konposatuen ikurrak, formulak eta egiturak, eta sailkatu adibideak.</div>
+<div class="help"><a class="resource-btn" href="https://docs.google.com/document/d/1JgO60SIQWyYfykEIDeq9iAhGKxlZhLFXOrl4-mxtQi4/edit?usp=drive_link" rel="noopener" target="_blank">📄 IREKI FITXA</a></div>
+<div class="box submit"><b>Entregatu behar duzuna:</b><br/>Ariketa-fitxa eta sailkapena.</div>
+</div>
+</details>
+<details>
+<summary><span class="num">4</span>Aldaketa kimikoaren ebidentziak<span class="phase">GARAPENA</span></summary>
+<div class="content">
+<div class="box"><b>Zer egin behar duzu?</b><br/>Behatu erreakzio kimiko baten seinaleak, jaso datuak eta azaldu zer ebidentziak adierazten duen substantzia berriak sortu direla.</div>
+<div class="help">
+<a class="resource-btn" href="https://docs.google.com/document/d/1d0qgiZOqgowtA-kqNl40BB00MSlYKhqrBU4D3POilp0/edit?usp=drive_link" rel="noopener" target="_blank">📄 IREKI JARDUERA</a>
+<a class="resource-btn secondary" href="https://docs.google.com/document/d/1yiUDR2IBMTiPUvNMJSh_VdxvBaAGFAMTs-WE9bz1Umk/edit?usp=drive_link" rel="noopener" target="_blank">🧪 ESPERIMENTU-GIDA</a>
+</div>
+<div class="box submit"><b>Entregatu behar duzuna:</b><br/>Behaketa-taula eta txosten laburra.</div>
+</div>
+</details>
+<details>
+<summary><span class="num">5</span>Ekuazio kimikoak eta kalkuluak<span class="phase">GARAPENA</span></summary>
+<div class="content">
+<div class="box"><b>Zer egin behar duzu?</b><br/>Interpretatu ekuazio kimiko sinpleak eta egin oinarrizko kalkulu kuantitatiboak.</div>
+<div class="help"><a class="resource-btn" href="https://docs.google.com/document/d/1mFWkqfQp3H8rCNFryw2NbfWw-vYZB7ebDT7kvUtqhdg/edit?usp=drive_link" rel="noopener" target="_blank">📄 IREKI FITXA</a></div>
+<div class="box submit"><b>Entregatu behar duzuna:</b><br/>Kalkulu- eta problema-fitxa.</div>
+</div>
+</details>
+<details class="final-product">
+<summary><span class="num">6</span>Materia eraldatzen dugu · Azken produktua<span class="phase final-phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
+<div class="content">
+<div class="final-intro">
+<span class="final-badge">AZKEN PRODUKTUA</span>
+<b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br/>
           Aukeratu materiaren edo eraldaketa kimiko baten adibide bat eta antolatu informazioa modu zientifiko eta grafikoan.
         </div>
-        <div class="help">
-          <a class="resource-btn" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1h7dyqzR6m2ohldy0bnrq8GvRIKMznidu8npkp8jAP70/edit?usp=drive_link">IREKI FITXA</a>
-          <a class="resource-btn secondary" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1T4oEDI4_RH0Oq8p8M993hjrNZdxLdProm4M9E9Ty_SY/edit?usp=drive_link">IREKI ERRUBRIKA</a>
-        </div>
-        <div class="box submit final-submit"><b>Entregatu behar duzuna:</b><br>Ikerketa-fitxa grafikoa edo infografia + azalpen laburra.</div>
-      </div>
-    </details>
-
-    <details>
-      <summary><span class="num">7</span>Banakako proba<span class="phase">AMAIERA</span></summary>
-      <div class="content">
-        <div class="box"><b>Zer egin behar duzu?</b><br>Unitatean landutako kontzeptuak eta egoera berrietan aplikatzeko gaitasuna erakutsiko dituzu banakako proba batean.</div>
-        <div class="help"><span class="no-link">🔒 Proba irakasleak emango du gelan</span></div>
-        <div class="box submit"><b>Ebidentzia:</b><br>Banakako idatzizko proba.</div>
-      </div>
-    </details>
-
-    <details>
-      <summary><span class="num">8</span>Autoebaluazioa<span class="phase">AMAIERA</span></summary>
-      <div class="content">
-        <div class="box"><b>Zer egin behar duzu?</b><br>Baloratu zer ulertu duzun materiari eta aldaketa kimikoei buruz, zer hobetu duzun eta zer landu behar duzun gehiago.</div>
-        <div class="help"><a class="resource-btn" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1etR3IR3MkMts76eh8Eiry338yYNm65TiUuvM6i66eTU/edit?usp=drive_link">📄 IREKI AUTOEBALUAZIOA</a></div>
-        <div class="box submit"><b>Entregatu behar duzuna:</b><br>Autoebaluazio-fitxa osatuta.</div>
-      </div>
-    </details>
-
-  </section>
-
-  <section class="section">
-    <h2>Nola jakingo duzu ondo egin duzula?</h2>
-    <ul>
-      <li>Aldaketa fisikoak eta kimikoak bereizten dituzu eta arrazoitzen duzu zergatik.</li>
-      <li>Atomo, elementu, konposatu eta molekula kontzeptuak zuzen erabiltzen dituzu.</li>
-      <li>Erreakzio kimiko baten ebidentziak identifikatzen eta azaltzen dituzu.</li>
-      <li>Ekuazio kimiko sinpleak interpretatzen eta oinarrizko kalkuluak egiten dituzu.</li>
-      <li>Informazioa modu argi, antolatu eta zientifikoan komunikatzen duzu.</li>
-    </ul>
-  </section>
+<div class="help">
+<a class="resource-btn" href="https://docs.google.com/document/d/1h7dyqzR6m2ohldy0bnrq8GvRIKMznidu8npkp8jAP70/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<a class="resource-btn secondary" href="https://docs.google.com/document/d/1T4oEDI4_RH0Oq8p8M993hjrNZdxLdProm4M9E9Ty_SY/edit?usp=drive_link" rel="noopener" target="_blank">IREKI ERRUBRIKA</a>
 </div>
-
-<div class="teacher">
-  <section class="section teacher-card">
-    <h2>Irakaslearentzako ikuspegia</h2>
-    <p><b>Helburu didaktikoa:</b> Elementuak eta konposatuak bereiztea; materiaren konposizioa atomoen eta konposatuen egiturarekin lotzea; aldaketa fisiko eta kimikoak bereiztea; ekuazio kimiko errazak interpretatzea; datu eta neurketa sinpleak erabiltzea; esperimentu edo eguneroko egoera baten emaitzak aztertu eta komunikatzea; eta substantzien erabilera segurua eta arduratsua sustatzea.</p>
-
-    <table>
-      <tr><th>Atala</th><th>Edukia</th></tr>
-      <tr>
-        <td>Konpetentzia espezifikoak</td>
-        <td>
-          <b>KE1</b> — Informazio eta datu zientifikoak bilatu, hautatu, aztertu eta interpretatzea.<br>
-          <b>KE2</b> — Zientziako eta eguneroko bizitzako problemak interpretatu, modelizatu eta ebaztea, metodo zientifikoa eta arrazoibide matematikoa erabiliz.<br>
-          <b>KE5</b> — Informazio zientifikoa eta matematikoa interpretatu, arazoak ebatzi eta emaitzak hainbat euskarritan komunikatzea.<br>
-          <b>KE6</b> — Zientzien, matematikaren, teknologiaren eta eguneroko bizitzaren arteko loturak identifikatzea.<br>
-          <b>KE7</b> — Akatsa, pertseberantzia eta ikaskuntza-prozesuaren autorregulazioa lantzea.
-        </td>
-      </tr>
-      <tr>
-        <td>Ebaluazio-irizpideak</td>
-        <td>
-          <b>1.1</b> Egoera zientifiko-matematikoki interpreta daitezkeenak identifikatzea eta mundu errealarekin lotzea.<br>
-          <b>1.2</b> Informazio zientifikoa eta iturri fidagarriak hautatzea.<br>
-          <b>1.3</b> Hiztegi eta terminologia zientifiko egokia erabiltzea.<br>
-          <b>2.1</b> Eguneroko gertakariak metodo zientifikoa eta zientzietako lege eta teoriak aplikatuz interpretatzea.<br>
-          <b>2.2</b> Gertuko testuinguru batean zientziarekin lotutako kontuak ebaztea, teknologia eta arrazoibide matematikoa erabiliz.<br>
-          <b>2.3</b> Testuinguruan jarritako problemak hizkera tekniko eta sinbolikoaren bidez formulatzea.<br>
-          <b>5.1</b> Eguneroko informazio zientifikoa kritikoki aztertzea eta interpretatzea.<br>
-          <b>5.2</b> Emandako datuak eta estrategia egokiak erabiliz arazo bati konponbidea ematea eta emaitza egiaztatzea.<br>
-          <b>5.3</b> Arazo eta proiektuen emaitzak hainbat euskarritan zabaltzea.<br>
-          <b>5.4</b> Iturri fidagarriak erabiltzea eta informazio esanguratsua hautatzea.<br>
-          <b>6.2</b> Zientzietako ezagutza-eremuen arteko konexioak identifikatzea.<br>
-          <b>6.3</b> Ondorioztatu, neurtu, komunikatu, sailkatu eta aurreikusi bezalako prozedura zientifikoak erabiltzea.<br>
-          <b>7.1</b> Akatsak eta ziurgabetasuna hobetzeko aukera gisa hartzea.<br>
-          <b>7.2</b> Jarrera positibo eta saiatua izatea.
-        </td>
-      </tr>
-      <tr>
-        <td>Oinarrizko jakintzak</td>
-        <td>
-          <b>H) MATERIA ETA HAREN ALDAKETAK</b><br>
-          • Teoria zinetiko-molekularra eta sistema materialen propietateak.<br>
-          • Materiaren konposizioa: atomoak, elementuak eta konposatuak.<br>
-          • IUPAC arauen araberako substantzia kimiko esanguratsuen nomenklatura.<br>
-          • Ekuazio kimiko errazak: interpretazio kualitatiboa eta kuantitatiboa.<br>
-          • Kalkulu estekiometriko errazak.<br>
-          • Esperimentazioa sistema materialekin: propietateak, konposizioa eta sailkapena.<br>
-          • Material motak eta propietateak.<br><br>
-          <b>A) TREBETASUN ZIENTIFIKO-TEKNOLOGIKOAK</b><br>
-          • Hipotesiak formulatu eta esperimentuen bidez egiaztatzea.<br>
-          • Laborategiko eta baliabide digitalen erabilera segurua.<br>
-          • Hizkera zientifikoa erabiltzea.<br>
-          • Magnitude fisikoen neurketa eta zenbakizko adierazpena.<br>
-          • Problema zientifiko-teknologikoak ebazteko estrategiak.<br><br>
-          <b>B) ZENBAKIZKO ZENTZUA</b><br>
-          • Zenbaki eta eragiketen erabilera eguneroko problema eta kalkulu zientifiko sinpleetan.
-        </td>
-      </tr>
-      <tr>
-        <td>Azken ekoizpena</td>
-        <td>
-          • Eguneroko aldaketa kimiko baten ikerketa-fitxa: hasierako substantziak, gertatutako aldaketa, ebidentziak eta ondorioa.<br>
-          • Aldaketa kimikoaren azalpen grafikoa edo infografia, elementu, konposatu eta erreakzio kimikoen hiztegi egokia erabiliz.
-        </td>
-      </tr>
-    </table>
-  </section>
-
-  <section class="section teacher-card">
-    <h2>Jarduerak, ebidentziak eta kalifikatzen duen KEa</h2>
-    <table>
-      <tr>
-        <th>Fasea</th>
-        <th>Jarduera</th>
-        <th>Ebaluatzeko tresnak / ebidentziak</th>
-        <th>Kalifikatzen duen KEa</th>
-      </tr>
-      <tr>
-        <td>Hasiera</td>
-        <td><b>J1.</b> Aldaketa ala eraldaketa? Eguneroko egoerak sailkatzea: izotza urtzea, azukrea disolbatzea, burdina herdoiltzea, papera erretzea...</td>
-        <td>Hasierako galdetegia / sailkapen-taula</td>
-        <td>KE1, KE2</td>
-      </tr>
-      <tr>
-        <td>Hasiera</td>
-        <td><b>J2.</b> Zer dago materiaren barruan? Elementu, konposatu, atomo eta molekulei buruzko aurretiko ideiak antolatzea.</td>
-        <td>Kontzeptu-mapa</td>
-        <td>KE1, KE6</td>
-      </tr>
-      <tr>
-        <td>Garapena</td>
-        <td><b>J3.</b> Elementuak eta konposatuak: sinboloak, formulak, egitura eta substantzien sailkapena lantzea.</td>
-        <td>Gelako ariketak + sailkapen-fitxa</td>
-        <td>KE1, KE2, KE6</td>
-      </tr>
-      <tr>
-        <td>Garapena</td>
-        <td><b>J4.</b> Aldaketa kimikoaren ebidentziak: eguneroko erreakzio baten edo laborategiko esperimentu sinple baten behaketa, datu-bilketa eta interpretazioa.</td>
-        <td>Jarduera praktikoa / behaketa-taula / txosten laburra</td>
-        <td>KE2, KE5, KE6</td>
-      </tr>
-      <tr>
-        <td>Garapena</td>
-        <td><b>J5.</b> Ekuazio kimiko errazak interpretatzea eta kalkulu kuantitatibo sinpleak egitea.</td>
-        <td>Problemak / kalkulu-fitxa</td>
-        <td>KE2, KE5</td>
-      </tr>
-      <tr>
-        <td>Amaiera</td>
-        <td><b>J6.</b> “Materia eraldatzen dugu” azken produktua: eguneroko aldaketa kimiko baten ikerketa-fitxa eta azalpen grafikoa edo infografia.</td>
-        <td>Azken produktua + errubrika</td>
-        <td>KE1, KE2, KE5, KE6</td>
-      </tr>
-      <tr>
-        <td>Amaiera</td>
-        <td><b>J7.</b> Banakako proba: elementuak, konposatuak, aldaketa kimikoak, ekuazio kimikoak eta kalkulu sinpleak.</td>
-        <td>Idatzizko proba</td>
-        <td>KE1, KE2, KE5, KE6</td>
-      </tr>
-      <tr>
-        <td>Amaiera</td>
-        <td><b>J8.</b> Zer ulertu dut hobeto eta non egin ditut akatsak? Ikaskuntza-prozesuaren berrikuspena.</td>
-        <td>Autoebaluazio-fitxa</td>
-        <td>KE7</td>
-      </tr>
-    </table>
-    <p style="font-size:13px;color:#667085;margin-top:12px">
-      J7ko proba eta haren soluzioak Drive-ko irakaslearentzako karpeta pribatuan mantentzen dira; ez dira ikasleen orri publikoan estekatzen.
-    </p>
-  </section>
+<div class="box submit final-submit"><b>Entregatu behar duzuna:</b><br/>Ikerketa-fitxa grafikoa edo infografia + azalpen laburra.</div>
 </div>
+</details>
+<details>
+<summary><span class="num">7</span>Banakako proba<span class="phase">AMAIERA</span></summary>
+<div class="content">
+<div class="box"><b>Zer egin behar duzu?</b><br/>Unitatean landutako kontzeptuak eta egoera berrietan aplikatzeko gaitasuna erakutsiko dituzu banakako proba batean.</div>
+<div class="help"><span class="no-link">🔒 Proba irakasleak emango du gelan</span></div>
+<div class="box submit"><b>Ebidentzia:</b><br/>Banakako idatzizko proba.</div>
+</div>
+</details>
+<details>
+<summary><span class="num">8</span>Autoebaluazioa<span class="phase">AMAIERA</span></summary>
+<div class="content">
+<div class="box"><b>Zer egin behar duzu?</b><br/>Baloratu zer ulertu duzun materiari eta aldaketa kimikoei buruz, zer hobetu duzun eta zer landu behar duzun gehiago.</div>
+<div class="help"><a class="resource-btn" href="https://docs.google.com/document/d/1etR3IR3MkMts76eh8Eiry338yYNm65TiUuvM6i66eTU/edit?usp=drive_link" rel="noopener" target="_blank">📄 IREKI AUTOEBALUAZIOA</a></div>
+<div class="box submit"><b>Entregatu behar duzuna:</b><br/>Autoebaluazio-fitxa osatuta.</div>
+</div>
+</details>
+</section>
+<section class="section">
+<h2>Nola jakingo duzu ondo egin duzula?</h2>
+<ul>
+<li>Aldaketa fisikoak eta kimikoak bereizten dituzu eta arrazoitzen duzu zergatik.</li>
+<li>Atomo, elementu, konposatu eta molekula kontzeptuak zuzen erabiltzen dituzu.</li>
+<li>Erreakzio kimiko baten ebidentziak identifikatzen eta azaltzen dituzu.</li>
+<li>Ekuazio kimiko sinpleak interpretatzen eta oinarrizko kalkuluak egiten dituzu.</li>
+<li>Informazioa modu argi, antolatu eta zientifikoan komunikatzen duzu.</li>
+</ul>
+</section>
+
 
 <div class="footer">Zientzia eta Teknologia Eremua · Curriculum Aniztasuna</div>
 </div>
 
-<script>
-function setMode(mode){
-  document.body.classList.toggle('teacher-mode',mode==='teacher');
-  document.getElementById('studentBtn').classList.toggle('active',mode==='student');
-  document.getElementById('teacherBtn').classList.toggle('active',mode==='teacher');
-}
-</script>
 </body>
 </html>

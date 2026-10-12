@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="eu">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>IE9 · Programatu, automatizatu eta konektatu</title>
 <style>
 :root{
@@ -153,113 +154,200 @@ details.activity[open] summary::before{transform:rotate(90deg)}
 @media(max-width:450px){
   .meta{grid-template-columns:1fr}
 }
+
+/* IRAKASLEAREN IKUSPEGIA · formatu bateratua */
+.teacher-summary{
+  background:#fffdf8;
+  border:1px solid #e7d7b4;
+  border-radius:14px;
+  margin:14px 0;
+  overflow:hidden;
+}
+.teacher-summary > summary{
+  cursor:pointer;
+  list-style:none;
+  padding:13px 15px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#5f4a24;
+  background:#fffaf0;
+}
+.teacher-summary > summary::-webkit-details-marker{display:none}
+.teacher-summary > summary::before{
+  content:"›";
+  font-size:22px;
+  line-height:1;
+  color:#9a6a22;
+  transition:transform .18s ease;
+}
+.teacher-summary[open] > summary::before{transform:rotate(90deg)}
+.teacher-tag{
+  margin-left:auto;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.04em;
+  color:#8a6a2f;
+}
+.teacher-body{
+  border-top:1px solid #eadfc8;
+  padding:14px 15px 15px;
+  font-size:13px;
+  line-height:1.45;
+}
+.teacher-goal{
+  background:#fff;
+  border-left:4px solid #9a6a22;
+  padding:10px 12px;
+  border-radius:7px;
+  margin-bottom:10px;
+}
+.teacher-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.teacher-box{
+  background:#fff;
+  border:1px solid #eee5d4;
+  border-radius:10px;
+  padding:10px 12px;
+}
+.teacher-box h4{
+  margin:0 0 6px;
+  font-size:12px;
+  color:#795a22;
+  text-transform:uppercase;
+}
+.teacher-box p{margin:0}
+.teacher-wide{grid-column:1/-1}
+.teacher-note{
+  margin-top:10px;
+  background:#f7f9fb;
+  border-left:4px solid #667085;
+  padding:9px 11px;
+  border-radius:7px;
+}
+@media(max-width:650px){
+  .teacher-grid{grid-template-columns:1fr}
+  .teacher-wide{grid-column:auto}
+  .teacher-tag{display:none}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-
 <section class="hero">
-  <h1>IE9 · Programatu, automatizatu eta konektatu</h1>
-  <p><b>Galdera gidaria:</b> Nola bihur dezakegu ideia bat sistema automatizatu, erabilgarri eta seguruan?</p>
+<h1>IE9 · Programatu, automatizatu eta konektatu</h1>
+<p><b>Galdera gidaria:</b> Nola bihur dezakegu ideia bat sistema automatizatu, erabilgarri eta seguruan?</p>
 </section>
-
 <div class="meta">
-  <div class="m"><b>ERRONKA</b><p>Arazo txiki bati erantzuten dion sistema automatizatua sortzea.</p></div>
-  <div class="m"><b>ZER LANDUKO DUGU?</b><p>Algoritmoak, programazioa, sentsoreak, robotika, IoT, segurtasuna, datuak eta AI.</p></div>
-  <div class="m"><b>AZKEN PRODUKTUA</b><p>Sistema automatizatu adimenduna.</p></div>
-  <div class="m"><b>DENBORA</b><p>15-16 saio inguru.</p></div>
+<div class="m"><b>ERRONKA</b><p>Arazo txiki bati erantzuten dion sistema automatizatua sortzea.</p></div>
+<div class="m"><b>ZER LANDUKO DUGU?</b><p>Algoritmoak, programazioa, sentsoreak, robotika, IoT, segurtasuna, datuak eta AI.</p></div>
+<div class="m"><b>AZKEN PRODUKTUA</b><p>Sistema automatizatu adimenduna.</p></div>
+<div class="m"><b>DENBORA</b><p>15-16 saio inguru.</p></div>
 </div>
-
-<h2>Jarduerak</h2>
-
+<details class="teacher-summary">
+<summary>Irakaslearen ikuspegia <span class="teacher-tag">PROGRAMAZIOAREKIN LOTURA</span></summary>
+<div class="teacher-body">
+<div class="teacher-goal"><b>Helburu didaktikoa:</b> Algoritmoak eta fluxu-diagramak sortzea; sarrerak, aldagaiak, baldintzak eta irteerak programatzea; sentsoreekin automatizazio sinpleak egitea; elektronika digitalaren eta ate logikoen oinarriak interpretatzea; robotika/IoT oinarriak ulertzea; segurtasuna, pribatutasuna, Creative Commons eta AIren erabilera arduratsua lantzea.</div>
+<div class="teacher-grid">
+<div class="teacher-box">
+<h4>Konpetentzia espezifikoak</h4>
+<p>KE1, KE4, KE5, KE6, KE7, KE8</p>
+</div>
+<div class="teacher-box">
+<h4>Ebaluazio-irizpideak</h4>
+<p>1.2–1.3 Informazio tekniko fidagarria hautatu eta terminologia egokia erabiltzea. 4.2 Gailu tradizional eta digitalak modu eraginkor eta seguruan erabiltzea. 4.4 Eduki eta material digital errazak sortzea. 4.5 Teknologia modu arduratsuan erabiltzea eta haren eragina baloratzea. 5.2–5.3 Arazo bati konponbidea ematea, probatzea eta emaitzak komunikatzea. 6.2–6.3 Ezagutza-eremuen arteko loturak eta prozedurak erabiltzea. 7.1–7.2 Iterazioa eta hobekuntza. 8.1 Proiektu-lanean erantzukizuna.</p>
+</div>
+<div class="teacher-box teacher-wide">
+<h4>Oinarrizko jakintzak</h4>
+<p>F) PENTSAMENDU KONPUTAZIONALA, PROGRAMAZIOA, ROBOTIKA ETA DIGITALIZAZIOA<br/>• Algoritmoak; bloke-programazioa.<br/>• Elektronika analogiko/digitala, ate logikoen oinarrizko interpretazioa eta robotika-elementuak.<br/>• IoT sistemak eta kontrol-elementuak.<br/>• Espazio partekatuak eta gailuen konfigurazioa.<br/>• Sareko segurtasuna, datuen babesa eta Creative Commons.<br/>• AIren oinarrizko erabilera kritiko eta arduratsua. A) TREBETASUN ZIENTIFIKO-TEKNOLOGIKOAK. L) ZENTZU SOZIOAFEKTIBOA.</p>
+</div>
+</div>
+<div class="teacher-note"><b>Ebaluazioaren logika:</b> J1–J2 diagnostikoak dira eta ez dira zuzenean kalifikatzen; J3–J5 garapen-ebidentziak dira; J6 azken produktu integratua da eta errubrikaz baloratzen da; J7 banakako egiaztapena da eta ez da orri publikoan estekatzen; J8 autoebaluazioa eta prozesuaren berrikuspena da.</div>
+</div>
+</details><h2>Jarduerak</h2>
 <details class="activity">
-  <summary><span class="title">J1 · Zer egiten du makina batek aginduak jasotzen dituenean?</span><span class="phase">HASIERA</span></summary>
-  <div class="content">
-    <p>Algoritmo eta automatizazioari buruzko lehen ideiak.</p>
-    <a class="btn" href="https://docs.google.com/document/d/12cr7ApUraY7jrQuIaFVpifOkylIuoomVjtBEI2YoytI/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Hasierako erantzunak.</div>
-  </div>
+<summary><span class="title">J1 · Zer egiten du makina batek aginduak jasotzen dituenean?</span><span class="phase">HASIERA</span></summary>
+<div class="content">
+<p>Algoritmo eta automatizazioari buruzko lehen ideiak.</p>
+<a class="btn" href="https://docs.google.com/document/d/12cr7ApUraY7jrQuIaFVpifOkylIuoomVjtBEI2YoytI/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Hasierako erantzunak.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J2 · Algoritmoaren lehen mapa</span><span class="phase">HASIERA</span></summary>
-  <div class="content">
-    <p>Programazioaren oinarrizko kontzeptuak antolatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1aM09rs5bfwNXpofz2jF6t-GaOYk3SW8ry6e7Sd6JEIY/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Taula + fluxu-diagrama.</div>
-  </div>
+<summary><span class="title">J2 · Algoritmoaren lehen mapa</span><span class="phase">HASIERA</span></summary>
+<div class="content">
+<p>Programazioaren oinarrizko kontzeptuak antolatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1aM09rs5bfwNXpofz2jF6t-GaOYk3SW8ry6e7Sd6JEIY/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Taula + fluxu-diagrama.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J3 · Programatu: sarreratik irteerara</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Botoiak, aldagaiak eta irteerak programatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1IErLZENUHeutMJBrHflvj7GsgmJPWOdOGrLlnOM2MfM/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <a class="btn alt" href="https://makecode.microbit.org/" target="_blank" rel="noopener">IREKI MakeCode</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Programa + azalpena.</div>
-  </div>
+<summary><span class="title">J3 · Programatu: sarreratik irteerara</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Botoiak, aldagaiak eta irteerak programatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1IErLZENUHeutMJBrHflvj7GsgmJPWOdOGrLlnOM2MfM/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<a class="btn alt" href="https://makecode.microbit.org/" rel="noopener" target="_blank">IREKI MakeCode</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Programa + azalpena.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J4 · Automatizatu: sentsore batek erabakitzen du</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Sentsore bat eta if/else baldintza erabili.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1V-2zNDz_-CT4k3eGBDUP5jHdvHkj5_SHQfJB-XaA8DE/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <a class="btn alt" href="https://makecode.microbit.org/" target="_blank" rel="noopener">IREKI MakeCode</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Programa + 3 proba.</div>
-  </div>
+<summary><span class="title">J4 · Automatizatu: sentsore batek erabakitzen du</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Sentsore bat eta if/else baldintza erabili.</p>
+<a class="btn" href="https://docs.google.com/document/d/1V-2zNDz_-CT4k3eGBDUP5jHdvHkj5_SHQfJB-XaA8DE/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<a class="btn alt" href="https://makecode.microbit.org/" rel="noopener" target="_blank">IREKI MakeCode</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Programa + 3 proba.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J5 · Konektatu, baina seguru</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>IoT, datuen babesa, Creative Commons eta AI erabilera aztertu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1PDWNu3Y2CsHL0jRSIDMD3I6NffLcjdCYEfE_zivSKJ0/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Kasuaren erantzunak + segurtasun-neurriak.</div>
-  </div>
+<summary><span class="title">J5 · Konektatu, baina seguru</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>IoT, datuen babesa, Creative Commons eta AI erabilera aztertu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1PDWNu3Y2CsHL0jRSIDMD3I6NffLcjdCYEfE_zivSKJ0/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Kasuaren erantzunak + segurtasun-neurriak.</div>
+</div>
 </details>
-
 <details class="activity final-product">
-  <summary><span class="title">J6 · Sistema automatizatu adimenduna</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
-  <div class="content">
-    <div class="final-intro">
-      <span class="final-badge">AZKEN PRODUKTUA</span><br>
-      <b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br>
+<summary><span class="title">J6 · Sistema automatizatu adimenduna</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
+<div class="content">
+<div class="final-intro">
+<span class="final-badge">AZKEN PRODUKTUA</span><br/>
+<b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br/>
       Programazioa, automatizazioa, probak eta segurtasuna sistema bakar batean integratu eta bere funtzionamendua dokumentatu.
     </div>
-    <a class="btn" href="https://docs.google.com/document/d/1NmizHbKHfAaszNQPVUtTbim2oyOzXitZXT7wsT15GHM/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <a class="btn secondary" href="https://docs.google.com/document/d/1ZijIIPnB6Jx3XEK6PRJM1NGKlRcXyzJllxtF2_S8yzA/edit?usp=drive_link" target="_blank" rel="noopener">IREKI ERRUBRIKA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Prototipoa/simulazioa + fluxu-diagrama + programa + proba-taula + azalpena.</div>
-  </div>
+<a class="btn" href="https://docs.google.com/document/d/1NmizHbKHfAaszNQPVUtTbim2oyOzXitZXT7wsT15GHM/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<a class="btn secondary" href="https://docs.google.com/document/d/1ZijIIPnB6Jx3XEK6PRJM1NGKlRcXyzJllxtF2_S8yzA/edit?usp=drive_link" rel="noopener" target="_blank">IREKI ERRUBRIKA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Prototipoa/simulazioa + fluxu-diagrama + programa + proba-taula + azalpena.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J7 · Banakako egiaztapen-proba</span><span class="phase">AMAIERA</span></summary>
-  <div class="content">
-    <p>Irakasleak emango du gelan.</p>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
-  </div>
+<summary><span class="title">J7 · Banakako egiaztapen-proba</span><span class="phase">AMAIERA</span></summary>
+<div class="content">
+<p>Irakasleak emango du gelan.</p>
+<div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J8 · Nire algoritmoa nola hobetu da?</span><span class="phase">AMAIERA</span></summary>
-  <div class="content">
-    <p>Hasierako ideiak eta azken sistema alderatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1oMreePzjwaWWmn34i4BfjDs-ZVQSqqGArpzBMN7Hxtw/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div>
-  </div>
+<summary><span class="title">J8 · Nire algoritmoa nola hobetu da?</span><span class="phase">AMAIERA</span></summary>
+<div class="content">
+<p>Hasierako ideiak eta azken sistema alderatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1oMreePzjwaWWmn34i4BfjDs-ZVQSqqGArpzBMN7Hxtw/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div>
+</div>
 </details>
-
 <section class="success">
-  <h3>Nola jakingo duzu ondo egin duzula?</h3>
-  <ul>
-    <li>Algoritmoa urrats logiko eta ulergarrietan antolatzen baduzu.</li>
-    <li>Sarrerak, baldintzak eta irteerak zuzen programatzen badituzu.</li>
-    <li>Sistema hainbat egoeratan probatu eta emaitzak erregistratzen badituzu.</li>
-    <li>Datuen babesa, segurtasuna eta erabilera arduratsua diseinuaren parte bihurtzen badituzu.</li>
-  </ul>
+<h3>Nola jakingo duzu ondo egin duzula?</h3>
+<ul>
+<li>Algoritmoa urrats logiko eta ulergarrietan antolatzen baduzu.</li>
+<li>Sarrerak, baldintzak eta irteerak zuzen programatzen badituzu.</li>
+<li>Sistema hainbat egoeratan probatu eta emaitzak erregistratzen badituzu.</li>
+<li>Datuen babesa, segurtasuna eta erabilera arduratsua diseinuaren parte bihurtzen badituzu.</li>
+</ul>
 </section>
-
 <p class="muted">Zientzia eta Teknologia Eremua · Curriculum Aniztasuna</p>
 </div>
 </body>

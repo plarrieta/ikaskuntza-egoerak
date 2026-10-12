@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="eu">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>IE11 · Lurra sistema bizia da</title>
 <style>
 :root{
@@ -151,111 +152,198 @@ details.activity[open] summary::before{transform:rotate(90deg)}
 @media(max-width:450px){
   .meta{grid-template-columns:1fr}
 }
+
+/* IRAKASLEAREN IKUSPEGIA · formatu bateratua */
+.teacher-summary{
+  background:#fffdf8;
+  border:1px solid #e7d7b4;
+  border-radius:14px;
+  margin:14px 0;
+  overflow:hidden;
+}
+.teacher-summary > summary{
+  cursor:pointer;
+  list-style:none;
+  padding:13px 15px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#5f4a24;
+  background:#fffaf0;
+}
+.teacher-summary > summary::-webkit-details-marker{display:none}
+.teacher-summary > summary::before{
+  content:"›";
+  font-size:22px;
+  line-height:1;
+  color:#9a6a22;
+  transition:transform .18s ease;
+}
+.teacher-summary[open] > summary::before{transform:rotate(90deg)}
+.teacher-tag{
+  margin-left:auto;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.04em;
+  color:#8a6a2f;
+}
+.teacher-body{
+  border-top:1px solid #eadfc8;
+  padding:14px 15px 15px;
+  font-size:13px;
+  line-height:1.45;
+}
+.teacher-goal{
+  background:#fff;
+  border-left:4px solid #9a6a22;
+  padding:10px 12px;
+  border-radius:7px;
+  margin-bottom:10px;
+}
+.teacher-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.teacher-box{
+  background:#fff;
+  border:1px solid #eee5d4;
+  border-radius:10px;
+  padding:10px 12px;
+}
+.teacher-box h4{
+  margin:0 0 6px;
+  font-size:12px;
+  color:#795a22;
+  text-transform:uppercase;
+}
+.teacher-box p{margin:0}
+.teacher-wide{grid-column:1/-1}
+.teacher-note{
+  margin-top:10px;
+  background:#f7f9fb;
+  border-left:4px solid #667085;
+  padding:9px 11px;
+  border-radius:7px;
+}
+@media(max-width:650px){
+  .teacher-grid{grid-template-columns:1fr}
+  .teacher-wide{grid-column:auto}
+  .teacher-tag{display:none}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-
 <section class="hero">
-  <h1>IE11 · Lurra sistema bizia da</h1>
-  <p><b>Galdera gidaria:</b> Nola jakin dezakegu gure inguruko ekosistema osasuntsu dagoen?</p>
+<h1>IE11 · Lurra sistema bizia da</h1>
+<p><b>Galdera gidaria:</b> Nola jakin dezakegu gure inguruko ekosistema osasuntsu dagoen?</p>
 </section>
-
 <div class="meta">
-  <div class="m"><b>ERRONKA</b><p>Tokiko ekosistema baten egoera aztertu eta hobekuntza-neurriak proposatzea.</p></div>
-  <div class="m"><b>ZER LANDUKO DUGU?</b><p>Ekosistemak, faktore biotiko/abiotikoak, sare trofikoak, biodibertsitatea eta giza eragina.</p></div>
-  <div class="m"><b>AZKEN PRODUKTUA</b><p>Tokiko ekosistemaren diagnostikoa + hobekuntza-plana.</p></div>
-  <div class="m"><b>DENBORA</b><p>15-16 saio inguru.</p></div>
+<div class="m"><b>ERRONKA</b><p>Tokiko ekosistema baten egoera aztertu eta hobekuntza-neurriak proposatzea.</p></div>
+<div class="m"><b>ZER LANDUKO DUGU?</b><p>Ekosistemak, faktore biotiko/abiotikoak, sare trofikoak, biodibertsitatea eta giza eragina.</p></div>
+<div class="m"><b>AZKEN PRODUKTUA</b><p>Tokiko ekosistemaren diagnostikoa + hobekuntza-plana.</p></div>
+<div class="m"><b>DENBORA</b><p>15-16 saio inguru.</p></div>
 </div>
-
-<h2>Jarduerak</h2>
-
+<details class="teacher-summary">
+<summary>Irakaslearen ikuspegia <span class="teacher-tag">PROGRAMAZIOAREKIN LOTURA</span></summary>
+<div class="teacher-body">
+<div class="teacher-goal"><b>Helburu didaktikoa:</b> Ekosistema baten osagai biotiko eta abiotikoak identifikatzea, atmosferaren eta hidrosferaren eragina barne; sare trofikoak eta energia-fluxua interpretatzea; biodibertsitate-datuak antolatu eta aztertzea; giza eraginak baloratzea; datuak eta interpretazioak lankidetzan kontrastatzea; eta hobekuntza-neurri errealistak proposatzea.</div>
+<div class="teacher-grid">
+<div class="teacher-box">
+<h4>Konpetentzia espezifikoak</h4>
+<p>KE1, KE3, KE5, KE6, KE7, KE8</p>
+</div>
+<div class="teacher-box">
+<h4>Ebaluazio-irizpideak</h4>
+<p>1.1–1.3 Ekosistema eta datu biologikoak interpretatzea eta informazio fidagarria erabiltzea. 3.4 Banakako eta taldeko ekintzek ingurunean dituzten efektuak ebaluatu eta ohitura jasangarriak proposatzea. 5.1–5.4 Datuak kritikoki interpretatu, arazoei erantzun eta emaitzak komunikatzea. 6.2–6.3 Ezagutza biologiko, matematiko eta ingurumenekoen arteko konexioak egitea. 7.1–7.2 Autoebaluazioa eta hobekuntza. 8.1 Tokiko diagnostikoan datuak eta interpretazioak talde txikian kontrastatzea, zereginak arduraz hartuz eta ekarpenak errespetuz partekatuz.</p>
+</div>
+<div class="teacher-box teacher-wide">
+<h4>Oinarrizko jakintzak</h4>
+<p>K) LURRA SISTEMA GISA ETA GARAPEN JASANGARRIA<br/>• Ekosistemak: faktore biotiko/abiotikoak eta erlazioak; atmosferaren eta hidrosferaren aldagaiak faktore abiotiko gisa.<br/>• Biosfera, atmosfera, hidrosfera eta geosferaren arteko erlazio sistemikoak.<br/>• Klima-aldaketa eta giza jardueren eragina. G) ZENTZU ESTOKASTIKOA<br/>• Datuen antolaketa, taulak, grafikoak eta analisi kritikoa. A) TREBETASUN ZIENTIFIKO-TEKNOLOGIKOAK. L) ZENTZU SOZIOAFEKTIBOA.</p>
+</div>
+</div>
+<div class="teacher-note"><b>Ebaluazioaren logika:</b> J1–J2 diagnostikoak dira eta ez dira zuzenean kalifikatzen; J3–J5 garapen-ebidentziak dira; J6 azken produktu integratua da eta errubrikaz baloratzen da; J7 banakako egiaztapena da eta ez da orri publikoan estekatzen; J8 autoebaluazioa eta prozesuaren berrikuspena da.</div>
+</div>
+</details><h2>Jarduerak</h2>
 <details class="activity">
-  <summary><span class="title">J1 · Gure inguruko ekosistema</span><span class="phase">HASIERA</span></summary>
-  <div class="content">
-    <p>Ekosistema bati buruz dituzun hasierako ideiak azaldu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/11HcDqAomAkE_Ga3VOsN7YIwqvX_I27kpdh90kj7KLb0/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Aurretiko ideien fitxa.</div>
-  </div>
+<summary><span class="title">J1 · Gure inguruko ekosistema</span><span class="phase">HASIERA</span></summary>
+<div class="content">
+<p>Ekosistema bati buruz dituzun hasierako ideiak azaldu.</p>
+<a class="btn" href="https://docs.google.com/document/d/11HcDqAomAkE_Ga3VOsN7YIwqvX_I27kpdh90kj7KLb0/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Aurretiko ideien fitxa.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J2 · Ekosistemaren lehen mapa</span><span class="phase">HASIERA</span></summary>
-  <div class="content">
-    <p>Faktore biotikoak, abiotikoak eta haien arteko loturak antolatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/19Xffpi-t5me49fmFYykaSXYPcvXcsIKDOVQA0N5BEw4/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Kontzeptu-mapa.</div>
-  </div>
+<summary><span class="title">J2 · Ekosistemaren lehen mapa</span><span class="phase">HASIERA</span></summary>
+<div class="content">
+<p>Faktore biotikoak, abiotikoak eta haien arteko loturak antolatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/19Xffpi-t5me49fmFYykaSXYPcvXcsIKDOVQA0N5BEw4/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Kontzeptu-mapa.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J3 · Sare trofikoa</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Organismoen arteko elikadura-harremanak eta energia-fluxua aztertu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1sjxG8ejUWGScLfWKTQO-MO97VTAJv5qNueHcW5o9XMM/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Sare trofikoa + azalpena.</div>
-  </div>
+<summary><span class="title">J3 · Sare trofikoa</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Organismoen arteko elikadura-harremanak eta energia-fluxua aztertu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1sjxG8ejUWGScLfWKTQO-MO97VTAJv5qNueHcW5o9XMM/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Sare trofikoa + azalpena.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J4 · Biodibertsitatea datuekin</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Datuak antolatu, alderatu eta biodibertsitateari buruzko ondorioak atera.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1wxVWz0GKf9VHrg_5J_Nf8QslXYLKI7f3I9w84wCi_Qw/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Datu-taula + grafikoa + ondorioa.</div>
-  </div>
+<summary><span class="title">J4 · Biodibertsitatea datuekin</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Datuak antolatu, alderatu eta biodibertsitateari buruzko ondorioak atera.</p>
+<a class="btn" href="https://docs.google.com/document/d/1wxVWz0GKf9VHrg_5J_Nf8QslXYLKI7f3I9w84wCi_Qw/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Datu-taula + grafikoa + ondorioa.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J5 · Giza eragina</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Giza jarduerek ekosisteman dituzten ondorioak identifikatu eta hobekuntzak proposatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1O6uEZe5SwG5h0sCH2vSt6eXtS0nUKBc8MfxzJQ8dnzw/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Eragin-taula + hobekuntza-proposamenak.</div>
-  </div>
+<summary><span class="title">J5 · Giza eragina</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Giza jarduerek ekosisteman dituzten ondorioak identifikatu eta hobekuntzak proposatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1O6uEZe5SwG5h0sCH2vSt6eXtS0nUKBc8MfxzJQ8dnzw/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Eragin-taula + hobekuntza-proposamenak.</div>
+</div>
 </details>
-
 <details class="activity final-product">
-  <summary><span class="title">J6 · Tokiko ekosistemaren diagnostikoa</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
-  <div class="content">
-    <div class="final-intro">
-      <span class="final-badge">AZKEN PRODUKTUA</span><br>
-      <b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br>
+<summary><span class="title">J6 · Tokiko ekosistemaren diagnostikoa</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
+<div class="content">
+<div class="final-intro">
+<span class="final-badge">AZKEN PRODUKTUA</span><br/>
+<b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br/>
       Ekosistemaren datuak, harremanak eta giza eragina bateratu, diagnostiko arrazoitua eta hobekuntza-plana egiteko.
     </div>
-    <a class="btn" href="https://docs.google.com/document/d/1B969J4vNkX-i_GOaom4mb0Z9VLXLrxcEWEeca7dc__Y/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <a class="btn secondary" href="https://docs.google.com/document/d/1hKQn1JILNjzcZbCrUO3FWc8BPKdQ2yuFpzYGw0ljIws/edit?usp=drive_link" target="_blank" rel="noopener">IREKI ERRUBRIKA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Diagnostikoa + hobekuntza-plana.</div>
-  </div>
+<a class="btn" href="https://docs.google.com/document/d/1B969J4vNkX-i_GOaom4mb0Z9VLXLrxcEWEeca7dc__Y/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<a class="btn secondary" href="https://docs.google.com/document/d/1hKQn1JILNjzcZbCrUO3FWc8BPKdQ2yuFpzYGw0ljIws/edit?usp=drive_link" rel="noopener" target="_blank">IREKI ERRUBRIKA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Diagnostikoa + hobekuntza-plana.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J7 · Banakako egiaztapen-proba</span><span class="phase">AMAIERA</span></summary>
-  <div class="content">
-    <p>Irakasleak emango du gelan.</p>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
-  </div>
+<summary><span class="title">J7 · Banakako egiaztapen-proba</span><span class="phase">AMAIERA</span></summary>
+<div class="content">
+<p>Irakasleak emango du gelan.</p>
+<div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J8 · Zer aldatu da nire ikuspegian?</span><span class="phase">AMAIERA</span></summary>
-  <div class="content">
-    <p>Hasierako ideiak eta ekosistemari buruzko azken azalpena alderatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1CCkJN1lHITPMVd9BjCaj1ik999v5kWFmpvd8vkZXUy4/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div>
-  </div>
+<summary><span class="title">J8 · Zer aldatu da nire ikuspegian?</span><span class="phase">AMAIERA</span></summary>
+<div class="content">
+<p>Hasierako ideiak eta ekosistemari buruzko azken azalpena alderatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1CCkJN1lHITPMVd9BjCaj1ik999v5kWFmpvd8vkZXUy4/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div>
+</div>
 </details>
-
 <section class="success">
-  <h3>Nola jakingo duzu ondo egin duzula?</h3>
-  <ul>
-    <li>Faktore biotikoak eta abiotikoak bereizten eta elkarrekin lotzen badituzu.</li>
-    <li>Sare trofiko batean organismoen arteko harremanak eta energia-fluxua zuzen azaltzen badituzu.</li>
-    <li>Biodibertsitateari buruzko datuak antolatu, irudikatu eta ondorio arrazoituak ateratzen badituzu.</li>
-    <li>Giza eraginak identifikatu eta diagnostikoarekin lotutako hobekuntza-neurri errealistak proposatzen badituzu.</li>
-  </ul>
+<h3>Nola jakingo duzu ondo egin duzula?</h3>
+<ul>
+<li>Faktore biotikoak eta abiotikoak bereizten eta elkarrekin lotzen badituzu.</li>
+<li>Sare trofiko batean organismoen arteko harremanak eta energia-fluxua zuzen azaltzen badituzu.</li>
+<li>Biodibertsitateari buruzko datuak antolatu, irudikatu eta ondorio arrazoituak ateratzen badituzu.</li>
+<li>Giza eraginak identifikatu eta diagnostikoarekin lotutako hobekuntza-neurri errealistak proposatzen badituzu.</li>
+</ul>
 </section>
-
 <p class="muted">Zientzia eta Teknologia Eremua · Curriculum Aniztasuna</p>
 </div>
 </body>

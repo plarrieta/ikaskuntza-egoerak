@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="eu">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>IE7 · Indarrak, egiturak eta mugimendua</title>
 <style>
 :root{
@@ -151,111 +152,198 @@ details.activity[open] summary::before{transform:rotate(90deg)}
 @media(max-width:450px){
   .meta{grid-template-columns:1fr}
 }
+
+/* IRAKASLEAREN IKUSPEGIA · formatu bateratua */
+.teacher-summary{
+  background:#fffdf8;
+  border:1px solid #e7d7b4;
+  border-radius:14px;
+  margin:14px 0;
+  overflow:hidden;
+}
+.teacher-summary > summary{
+  cursor:pointer;
+  list-style:none;
+  padding:13px 15px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#5f4a24;
+  background:#fffaf0;
+}
+.teacher-summary > summary::-webkit-details-marker{display:none}
+.teacher-summary > summary::before{
+  content:"›";
+  font-size:22px;
+  line-height:1;
+  color:#9a6a22;
+  transition:transform .18s ease;
+}
+.teacher-summary[open] > summary::before{transform:rotate(90deg)}
+.teacher-tag{
+  margin-left:auto;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.04em;
+  color:#8a6a2f;
+}
+.teacher-body{
+  border-top:1px solid #eadfc8;
+  padding:14px 15px 15px;
+  font-size:13px;
+  line-height:1.45;
+}
+.teacher-goal{
+  background:#fff;
+  border-left:4px solid #9a6a22;
+  padding:10px 12px;
+  border-radius:7px;
+  margin-bottom:10px;
+}
+.teacher-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.teacher-box{
+  background:#fff;
+  border:1px solid #eee5d4;
+  border-radius:10px;
+  padding:10px 12px;
+}
+.teacher-box h4{
+  margin:0 0 6px;
+  font-size:12px;
+  color:#795a22;
+  text-transform:uppercase;
+}
+.teacher-box p{margin:0}
+.teacher-wide{grid-column:1/-1}
+.teacher-note{
+  margin-top:10px;
+  background:#f7f9fb;
+  border-left:4px solid #667085;
+  padding:9px 11px;
+  border-radius:7px;
+}
+@media(max-width:650px){
+  .teacher-grid{grid-template-columns:1fr}
+  .teacher-wide{grid-column:auto}
+  .teacher-tag{display:none}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-
 <section class="hero">
-  <h1>IE7 · Indarrak, egiturak eta mugimendua</h1>
-  <p><b>Galdera gidaria:</b> Zergatik dira egitura batzuk beste batzuk baino sendoagoak, material antzekoak erabilita?</p>
+<h1>IE7 · Indarrak, egiturak eta mugimendua</h1>
+<p><b>Galdera gidaria:</b> Zergatik dira egitura batzuk beste batzuk baino sendoagoak, material antzekoak erabilita?</p>
 </section>
-
 <div class="meta">
-  <div class="m"><b>ERRONKA</b><p>Karga bati eusteko egitura eraginkor bat diseinatzea.</p></div>
-  <div class="m"><b>ZER LANDUKO DUGU?</b><p>Indarrak, esfortzuak, geometria, planoak eta diseinu teknologikoa.</p></div>
-  <div class="m"><b>AZKEN PRODUKTUA</b><p>Egitura/prototipoa + proba-txostena.</p></div>
-  <div class="m"><b>DENBORA</b><p>16 saio inguru.</p></div>
+<div class="m"><b>ERRONKA</b><p>Karga bati eusteko egitura eraginkor bat diseinatzea.</p></div>
+<div class="m"><b>ZER LANDUKO DUGU?</b><p>Indarrak, esfortzuak, geometria, planoak eta diseinu teknologikoa.</p></div>
+<div class="m"><b>AZKEN PRODUKTUA</b><p>Egitura/prototipoa + proba-txostena.</p></div>
+<div class="m"><b>DENBORA</b><p>16 saio inguru.</p></div>
 </div>
-
-<h2>Jarduerak</h2>
-
+<details class="teacher-summary">
+<summary>Irakaslearen ikuspegia <span class="teacher-tag">PROGRAMAZIOAREKIN LOTURA</span></summary>
+<div class="teacher-body">
+<div class="teacher-goal"><b>Helburu didaktikoa:</b> Indarren efektuak eta esfortzuak interpretatzea; diagramak egitea; neurriak, perimetroak, azalerak eta bolumenak aplikatzea; plano edo CAD irudikapen bat egitea; prototipo bat planifikatu eta probatzea; emaitzak dokumentatzea eta lankidetzan aritzea.</div>
+<div class="teacher-grid">
+<div class="teacher-box">
+<h4>Konpetentzia espezifikoak</h4>
+<p>KE1, KE2, KE4, KE5, KE6, KE7, KE8</p>
+</div>
+<div class="teacher-box">
+<h4>Ebaluazio-irizpideak</h4>
+<p>1.1, 1.3 Egoera teknologikoak identifikatu eta hiztegi egokia erabiltzea. 2.1–2.3 indar, egitura eta geometriarekin lotutako gertuko egoerak interpretatu, 2.2 irizpideari jarraituz problemak arrazoibide matematiko eta teknologikoarekin ebatzi, eta hizkera tekniko/sinbolikoaren bidez formulatzea. 4.2, 4.4 Gailu eta tresna digitalak modu seguru eta eraginkorrean erabiltzea eta materialak sortzea. 5.2–5.3 Diseinu-arazoari konponbidea ematea eta emaitzak komunikatzea. 6.2–6.3 Ezagutza-eremuen arteko loturak eta neurketa/prozedurak erabiltzea. 7.1–7.2 Prozesua berrikusi eta hobetzea. 8.1 Proiektuan zereginak arduraz hartzea.</p>
+</div>
+<div class="teacher-box teacher-wide">
+<h4>Oinarrizko jakintzak</h4>
+<p>I) INTERAKZIOAK ETA ENERGIA<br/>• Indarren efektuak eta problemak. C) NEURRIAREN ZENTZUA<br/>• Perimetroak, azalerak, bolumenak eta neurketa. D) ZENTZU ESPAZIALA<br/>• 2D/3D formak eta irudikapena. F) PENTSAMENDU KONPUTAZIONALA ETA DIGITALIZAZIOA<br/>• CAD eta dokumentazio digitala. A) TREBETASUN ZIENTIFIKO-TEKNOLOGIKOAK. L) ZENTZU SOZIOAFEKTIBOA.</p>
+</div>
+</div>
+<div class="teacher-note"><b>Ebaluazioaren logika:</b> J1–J2 diagnostikoak dira eta ez dira zuzenean kalifikatzen; J3–J5 garapen-ebidentziak dira; J6 azken produktu integratua da eta errubrikaz baloratzen da; J7 banakako egiaztapena da eta ez da orri publikoan estekatzen; J8 autoebaluazioa eta prozesuaren berrikuspena da.</div>
+</div>
+</details><h2>Jarduerak</h2>
 <details class="activity">
-  <summary><span class="title">J1 · Zergatik erortzen dira egitura batzuk?</span><span class="phase">HASIERA</span></summary>
-  <div class="content">
-    <p>Egituren sendotasunari buruzko lehen hipotesiak egin.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1hmXPL9KbDxuZMyLa0296yIDwFfvAfm5hRWdbKZUWxUQ/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Aurretiko ideien fitxa.</div>
-  </div>
+<summary><span class="title">J1 · Zergatik erortzen dira egitura batzuk?</span><span class="phase">HASIERA</span></summary>
+<div class="content">
+<p>Egituren sendotasunari buruzko lehen hipotesiak egin.</p>
+<a class="btn" href="https://docs.google.com/document/d/1hmXPL9KbDxuZMyLa0296yIDwFfvAfm5hRWdbKZUWxUQ/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Aurretiko ideien fitxa.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J2 · Non daude indarrak?</span><span class="phase">HASIERA</span></summary>
-  <div class="content">
-    <p>Egitura sinpleetan indarrak gezi bidez irudikatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1B5GyVm_AzVejLDy-GpJyaee-08dQFdXoORgKmPXFWv8/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> 3 indar-diagrama.</div>
-  </div>
+<summary><span class="title">J2 · Non daude indarrak?</span><span class="phase">HASIERA</span></summary>
+<div class="content">
+<p>Egitura sinpleetan indarrak gezi bidez irudikatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1B5GyVm_AzVejLDy-GpJyaee-08dQFdXoORgKmPXFWv8/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> 3 indar-diagrama.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J3 · Trakzioa, konpresioa eta flexioa</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Esfortzu motak eta deformazioak bereizi.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1iMKpuRpEWmIysO2QgqdK7Aou31G7NSSZENBweZ1IcqY/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Taula + azalpena.</div>
-  </div>
+<summary><span class="title">J3 · Trakzioa, konpresioa eta flexioa</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Esfortzu motak eta deformazioak bereizi.</p>
+<a class="btn" href="https://docs.google.com/document/d/1iMKpuRpEWmIysO2QgqdK7Aou31G7NSSZENBweZ1IcqY/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Taula + azalpena.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J4 · Geometria aplikatua</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Neurriak, azalera eta planoa aplikatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1rohvMnr0chMUKqyFVILklrBd_ELRHUdmA5C40gNMRUU/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Kalkuluak + planoa.</div>
-  </div>
+<summary><span class="title">J4 · Geometria aplikatua</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Neurriak, azalera eta planoa aplikatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1rohvMnr0chMUKqyFVILklrBd_ELRHUdmA5C40gNMRUU/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Kalkuluak + planoa.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J5 · Diseinu-erronka: zubi arin eta sendoa</span><span class="phase">GARAPENA</span></summary>
-  <div class="content">
-    <p>Prototipoaren lehen diseinua eta proba-plana egin.</p>
-    <a class="btn" href="https://docs.google.com/document/d/15BsIpArdxWYrUPOUg2DfPqOu5rvkL557V0KBAJnSi64/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Diseinu-fitxa.</div>
-  </div>
+<summary><span class="title">J5 · Diseinu-erronka: zubi arin eta sendoa</span><span class="phase">GARAPENA</span></summary>
+<div class="content">
+<p>Prototipoaren lehen diseinua eta proba-plana egin.</p>
+<a class="btn" href="https://docs.google.com/document/d/15BsIpArdxWYrUPOUg2DfPqOu5rvkL557V0KBAJnSi64/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Diseinu-fitxa.</div>
+</div>
 </details>
-
 <details class="activity final-product">
-  <summary><span class="title">J6 · Egitura sendo baten diseinu eta proba-txostena</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
-  <div class="content">
-    <div class="final-intro">
-      <span class="final-badge">AZKEN PRODUKTUA</span><br>
-      <b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br>
+<summary><span class="title">J6 · Egitura sendo baten diseinu eta proba-txostena</span><span class="phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
+<div class="content">
+<div class="final-intro">
+<span class="final-badge">AZKEN PRODUKTUA</span><br/>
+<b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br/>
       Prototipoa edo eredu digitala, planoa, indarren diagrama eta egindako probaren emaitzak modu koherentean dokumentatu.
     </div>
-    <a class="btn" href="https://docs.google.com/document/d/1lcqGlfDQujwGsCdz4Y17oFZpXfKTlbkeqldnoSK-8rg/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <a class="btn secondary" href="https://docs.google.com/document/d/1SQg8sPEqWZGYViegVv-1GKx2V-okLyaTArowBrTQixs/edit?usp=drive_link" target="_blank" rel="noopener">IREKI ERRUBRIKA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Prototipo/eredua + txostena edo aurkezpena.</div>
-  </div>
+<a class="btn" href="https://docs.google.com/document/d/1lcqGlfDQujwGsCdz4Y17oFZpXfKTlbkeqldnoSK-8rg/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<a class="btn secondary" href="https://docs.google.com/document/d/1SQg8sPEqWZGYViegVv-1GKx2V-okLyaTArowBrTQixs/edit?usp=drive_link" rel="noopener" target="_blank">IREKI ERRUBRIKA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Prototipo/eredua + txostena edo aurkezpena.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J7 · Banakako egiaztapen-proba</span><span class="phase">AMAIERA</span></summary>
-  <div class="content">
-    <p>Irakasleak emango du gelan.</p>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
-  </div>
+<summary><span class="title">J7 · Banakako egiaztapen-proba</span><span class="phase">AMAIERA</span></summary>
+<div class="content">
+<p>Irakasleak emango du gelan.</p>
+<div class="submit"><b>Entregatu behar duzuna:</b> Banakako proba.</div>
+</div>
 </details>
-
 <details class="activity">
-  <summary><span class="title">J8 · Zer aldatu dut nire diseinuan?</span><span class="phase">AMAIERA</span></summary>
-  <div class="content">
-    <p>Hasierako diseinua eta azken emaitza alderatu.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1w1WLshPYb7MmeQ0Ix_spfaZm3cQ9WhM7kAflvy2VmGA/edit?usp=drive_link" target="_blank" rel="noopener">IREKI FITXA</a>
-    <div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div>
-  </div>
+<summary><span class="title">J8 · Zer aldatu dut nire diseinuan?</span><span class="phase">AMAIERA</span></summary>
+<div class="content">
+<p>Hasierako diseinua eta azken emaitza alderatu.</p>
+<a class="btn" href="https://docs.google.com/document/d/1w1WLshPYb7MmeQ0Ix_spfaZm3cQ9WhM7kAflvy2VmGA/edit?usp=drive_link" rel="noopener" target="_blank">IREKI FITXA</a>
+<div class="submit"><b>Entregatu behar duzuna:</b> Autoebaluazio-fitxa.</div>
+</div>
 </details>
-
 <section class="success">
-  <h3>Nola jakingo duzu ondo egin duzula?</h3>
-  <ul>
-    <li>Indarrak eta esfortzu nagusiak egitura batean zuzen identifikatzen badituzu.</li>
-    <li>Neurriak, geometria eta planoa diseinuarekin koherentziaz erabiltzen badituzu.</li>
-    <li>Prototipoa edo eredua probatu eta emaitzak erregistratzen badituzu.</li>
-    <li>Egindako aldaketak datuetan eta behaketetan oinarrituta justifikatzen badituzu.</li>
-  </ul>
+<h3>Nola jakingo duzu ondo egin duzula?</h3>
+<ul>
+<li>Indarrak eta esfortzu nagusiak egitura batean zuzen identifikatzen badituzu.</li>
+<li>Neurriak, geometria eta planoa diseinuarekin koherentziaz erabiltzen badituzu.</li>
+<li>Prototipoa edo eredua probatu eta emaitzak erregistratzen badituzu.</li>
+<li>Egindako aldaketak datuetan eta behaketetan oinarrituta justifikatzen badituzu.</li>
+</ul>
 </section>
-
 <p class="muted">Zientzia eta Teknologia Eremua · Curriculum Aniztasuna</p>
 </div>
 </body>
