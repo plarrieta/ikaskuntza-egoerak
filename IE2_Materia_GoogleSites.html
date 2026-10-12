@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Materia eraldatzen dugu</title>
+<title>IE2 · Materia eraldatzen dugu</title>
 <style>
 :root{
   --bg:#f6f7f9;--card:#fff;--text:#1f2937;--muted:#667085;
@@ -42,13 +42,28 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid 
 .phase{font-size:12px;font-weight:800;letter-spacing:.04em;color:var(--muted);margin-left:auto}
 @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.grid{grid-template-columns:1fr}.wrap{padding:10px}.hero{padding:20px}.phase{display:none}}
+
+/* J6 · AZKEN PRODUKTUA */
+.final-product{border:2px solid #c97816;background:#fff8ed;box-shadow:0 7px 18px rgba(201,120,22,.12)}
+.final-product > summary{background:linear-gradient(90deg,#fffaf2,#fff1db)}
+.final-product .num{background:#c97816;color:#fff}
+.final-product .final-phase{background:#c97816;color:#fff;border-radius:999px;padding:5px 9px}
+.final-product .content{border-top:1px solid #efd1a6;padding-top:16px}
+.final-intro{background:#fff3df;border-left:5px solid #c97816;border-radius:8px;padding:12px 14px;margin:0 0 12px}
+.final-badge{display:inline-block;background:#c97816;color:#fff;border-radius:999px;padding:5px 9px;margin:0 0 9px;font-size:11px;font-weight:900;letter-spacing:.04em}
+.final-product .resource-btn{background:#c97816}
+.final-product .resource-btn:hover{background:#9d5c0f}
+.final-product .resource-btn.secondary{background:#fff;color:#8a500d;border:1px solid #c97816}
+.final-product .resource-btn.secondary:hover{background:#fff5e6}
+.final-product .final-submit{background:#fff0d8;border-left-color:#c97816}
+
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <section class="hero">
-  <h1>Materia eraldatzen dugu</h1>
+  <h1>IE2 · Materia eraldatzen dugu</h1>
   <p>Ikaskuntza-egoera · 1. ebaluazioa · 15 saio inguru</p>
 </section>
 
@@ -68,7 +83,7 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid 
   <section class="section">
     <h2>Jarduerak</h2>
 
-    <details open>
+    <details>
       <summary><span class="num">1</span>Aldaketa ala eraldaketa?<span class="phase">HASIERA</span></summary>
       <div class="content">
         <div class="box"><b>Zer egin behar duzu?</b><br>Sailkatu eguneroko hainbat aldaketa: izotza urtzea, azukrea disolbatzea, burdina herdoiltzea, papera erretzea... eta azaldu zure irizpidea.</div>
@@ -116,15 +131,19 @@ table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid 
       </div>
     </details>
 
-    <details>
-      <summary><span class="num">6</span>Materia eraldatzen dugu · Azken produktua<span class="phase">AMAIERA</span></summary>
+    <details class="final-product">
+      <summary><span class="num">6</span>Materia eraldatzen dugu · Azken produktua<span class="phase final-phase">AZKEN PRODUKTUA · APLIKAZIOA</span></summary>
       <div class="content">
-        <div class="box"><b>Zer egin behar duzu?</b><br>Aukeratu materiaren edo eraldaketa kimiko baten adibide bat eta antolatu informazioa modu zientifiko eta grafikoan.</div>
-        <div class="help">
-          <a class="resource-btn" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1h7dyqzR6m2ohldy0bnrq8GvRIKMznidu8npkp8jAP70/edit?usp=drive_link">📝 AZKEN PRODUKTUAREN FITXA</a>
-          <a class="resource-btn secondary" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1T4oEDI4_RH0Oq8p8M993hjrNZdxLdProm4M9E9Ty_SY/edit?usp=drive_link">✅ IKUSI ERRUBRIKA</a>
+        <div class="final-intro">
+          <span class="final-badge">AZKEN PRODUKTUA</span>
+          <b>Hemen aurreko jardueretan ikasitakoa bateratuko duzu.</b><br>
+          Aukeratu materiaren edo eraldaketa kimiko baten adibide bat eta antolatu informazioa modu zientifiko eta grafikoan.
         </div>
-        <div class="box submit"><b>Entregatu behar duzuna:</b><br>Ikerketa-fitxa grafikoa edo infografia + azalpen laburra.</div>
+        <div class="help">
+          <a class="resource-btn" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1h7dyqzR6m2ohldy0bnrq8GvRIKMznidu8npkp8jAP70/edit?usp=drive_link">IREKI FITXA</a>
+          <a class="resource-btn secondary" target="_blank" rel="noopener" href="https://docs.google.com/document/d/1T4oEDI4_RH0Oq8p8M993hjrNZdxLdProm4M9E9Ty_SY/edit?usp=drive_link">IREKI ERRUBRIKA</a>
+        </div>
+        <div class="box submit final-submit"><b>Entregatu behar duzuna:</b><br>Ikerketa-fitxa grafikoa edo infografia + azalpen laburra.</div>
       </div>
     </details>
 
